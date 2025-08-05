@@ -74,20 +74,24 @@ Today, factors like **performance footwear**, **social media exposure**, and **b
 ├── /figures                          # Plots used in thesis (e.g., spline fits, spread)
 └── README.md                         # This file
 
-📚 Academic Context
+## 📚 Academic Context
+
 This work builds upon and extends foundational research in:
 
-Extreme Value Theory — Coles (2001), Smith (1988), Robinson & Tawn (1995)
+- **Extreme Value Theory** — Coles (2001), Smith (1988), Robinson & Tawn (1995)  
+- **Athletic records modeling** — Einmahl et al. (2008)  
+- **Spline regression for time series** — Huang & Shen (2004), Perperoglou et al. (2019)  
+- **Economic sociology of sport** — Njororai Simiyu (2012)  
 
-Athletic records modeling — Einmahl et al. (2008)
+It was developed as part of my undergraduate honors thesis in **Statistics and Analytics**.
 
-Spline regression for time series — Huang & Shen (2004), Perperoglou et al. (2019)
+---
 
-Economic sociology of sport — Njororai Simiyu (2012)
+## 🧠 About the Author: Why Marathon Records?
 
-It was developed as part of my undergraduate honors thesis in Statistics and Analytics.
+This project was deeply personal. I was on the course during the 2023 Chicago Marathon when **Kelvin Kiptum broke the world record**, running faster than any human in history. I was at mile 16, far, far behind, when the crowd roared. I got chills realizing that I was quite literally following the same path where history had just been made. 
 
-🧠 About the Author: Why Marathon Records?
-This project was deeply personal. I was on the course during the 2023 Chicago Marathon when Kelvin Kiptum broke the world record, running faster than any human in history. I was at mile 16, far, far behind, when the crowd roared. I got chills realizing that I was quite literally following the same path where history had just been made. That moment sparked something in me, a desire to explore how performances like that happen, and what makes greatness possible.
+That moment sparked something in me — a desire to explore how performances like that happen, and what makes greatness possible.
 
 This thesis is my attempt to answer those questions — with data, rigor, and heart.
+
