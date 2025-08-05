@@ -1,0 +1,3053 @@
+---
+title: "2023 Women's Marathon times"
+author: "Jillian Myler"
+date: "2023-11-29"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+
+```{r}
+#install.packages("rvest")
+#install.packages("devtools")
+
+library(tidyverse)    #Essential Functions
+library(rvest)        #Read Tables From Webpages
+#install.packages("devtools")
+library(devtools)
+```
+
+#going to get 40 years of data initially & combine into one table 
+
+2023
+```{r}
+URL.2023times="https://worldathletics.org/records/toplists/road-running/marathon/outdoor/women/senior/2023?regionType=world&drop=regular&fiftyPercentRule=regular&page=1&bestResultsOnly=true"
+times2023 = URL.2023times %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+
+str(times2023)
+times2023
+
+```
+2022
+```{r}
+URL.2022times="https://worldathletics.org/records/toplists/road-running/marathon/outdoor/women/senior/2022?regionType=world&drop=regular&fiftyPercentRule=regular&page=1&bestResultsOnly=true"
+times2022 = URL.2022times %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+```
+
+2021
+```{r}
+URL.2021times="https://worldathletics.org/records/toplists/road-running/marathon/outdoor/women/senior/2021?regionType=world&drop=regular&fiftyPercentRule=regular&page=1&bestResultsOnly=true"
+times2021 = URL.2021times %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times2021
+```
+2020
+```{r}
+URL.2020times="https://worldathletics.org/records/toplists/road-running/marathon/outdoor/women/senior/2020?regionType=world&drop=regular&fiftyPercentRule=regular&page=1&bestResultsOnly=true"
+times2020 = URL.2020times %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times2020
+
+```
+
+2019
+```{r}
+URL.2019times="https://worldathletics.org/records/toplists/road-running/marathon/outdoor/women/senior/2019?regionType=world&drop=regular&fiftyPercentRule=regular&page=1&bestResultsOnly=true"
+times2019 = URL.2019times %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times2019
+
+```
+2018
+```{r}
+URL.2018times="https://worldathletics.org/records/toplists/road-running/marathon/outdoor/women/senior/2018?regionType=world&drop=regular&fiftyPercentRule=regular&page=1&bestResultsOnly=true"
+times2018 = URL.2018times %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times2018
+```
+2017
+```{r}
+URL.2017times="https://worldathletics.org/records/toplists/road-running/marathon/outdoor/women/senior/2017?regionType=world&drop=regular&fiftyPercentRule=regular&page=1&bestResultsOnly=true"
+times2017 = URL.2017times %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times2017
+
+```
+
+2016
+```{r}
+URL.2016times="https://worldathletics.org/records/toplists/road-running/marathon/outdoor/women/senior/2016?regionType=world&drop=regular&fiftyPercentRule=regular&page=1&bestResultsOnly=true"
+times2016 = URL.2016times %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times2016
+```
+2015
+```{r}
+URL.2015times="https://worldathletics.org/records/toplists/road-running/marathon/outdoor/women/senior/2015?regionType=world&drop=regular&fiftyPercentRule=regular&page=1&bestResultsOnly=true"
+times2015 = URL.2015times %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times2015
+
+```
+
+2014
+```{r}
+URL.2014times="https://worldathletics.org/records/toplists/road-running/marathon/outdoor/women/senior/2014?regionType=world&drop=regular&fiftyPercentRule=regular&page=1&bestResultsOnly=true"
+times2014 = URL.2014times %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times2014
+
+
+```
+
+2013
+```{r}
+URL.2013times="https://worldathletics.org/records/toplists/road-running/marathon/outdoor/women/senior/2013?regionType=world&drop=regular&fiftyPercentRule=regular&page=1&bestResultsOnly=true"
+times2013 = URL.2013times %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times2013
+
+
+
+```
+
+2012
+```{r}
+
+
+URL.2012times="https://worldathletics.org/records/toplists/road-running/marathon/all/women/senior/2012?regionType=world&page=1&bestResultsOnly=true&maxResultsByCountry=all&eventId=10229534&ageCategory=senior"
+times2012 = URL.2012times %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times2012
+
+
+```
+
+
+```{r}
+
+URL.2011times="https://worldathletics.org/records/toplists/road-running/marathon/all/women/senior/2011?regionType=world&page=1&bestResultsOnly=true&maxResultsByCountry=all&eventId=10229534&ageCategory=senior"
+times2011 = URL.2011times %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times2011
+
+
+```
+```{r}
+
+URL.2010times="https://worldathletics.org/records/toplists/road-running/marathon/all/women/senior/2010?regionType=world&page=1&bestResultsOnly=true&maxResultsByCountry=all&eventId=10229534&ageCategory=senior"
+times2010 = URL.2010times %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times2010
+
+
+```
+
+
+```{r}
+
+URL.2009times="https://worldathletics.org/records/toplists/road-running/marathon/all/women/senior/2009?regionType=world&page=1&bestResultsOnly=true&maxResultsByCountry=all&eventId=10229534&ageCategory=senior"
+times2009 = URL.2009times %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times2009
+
+
+```
+
+```{r}
+URL.2008times="https://worldathletics.org/records/toplists/road-running/marathon/all/women/senior/2008?regionType=world&page=1&bestResultsOnly=true&maxResultsByCountry=all&eventId=10229534&ageCategory=senior"
+times2008 = URL.2009times %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times2008
+
+```
+
+
+```{r}
+URL.2007times="https://worldathletics.org/records/toplists/road-running/marathon/all/women/senior/2007?regionType=world&page=1&bestResultsOnly=true&maxResultsByCountry=all&eventId=10229534&ageCategory=senior"
+times2007 = URL.2007times %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times2007
+
+
+```
+
+
+```{r}
+
+URL.2006times="https://worldathletics.org/records/toplists/road-running/marathon/all/women/senior/2006?regionType=world&page=1&bestResultsOnly=true&maxResultsByCountry=all&eventId=10229534&ageCategory=senior"
+times2006 = URL.2006times %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times2006
+
+
+
+
+```
+
+
+```{r}
+
+URL.2005times="https://worldathletics.org/records/toplists/road-running/marathon/all/women/senior/2005?regionType=world&page=1&bestResultsOnly=true&maxResultsByCountry=all&eventId=10229534&ageCategory=senior"
+times2005 = URL.2005times %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times2005
+
+
+```
+
+```{r}
+URL.2004times="https://worldathletics.org/records/toplists/road-running/marathon/all/women/senior/2004?regionType=world&page=1&bestResultsOnly=true&maxResultsByCountry=all&eventId=10229534&ageCategory=senior"
+times2004 = URL.2004times %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times2004
+
+
+
+```
+
+
+```{r}
+URL.2003times="https://worldathletics.org/records/toplists/road-running/marathon/all/women/senior/2003?regionType=world&page=1&bestResultsOnly=true&maxResultsByCountry=all&eventId=10229534&ageCategory=senior"
+times2003 = URL.2003times %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times2003
+
+
+
+```
+
+
+```{r}
+URL.2002times="https://worldathletics.org/records/toplists/road-running/marathon/all/women/senior/2002?regionType=world&page=1&bestResultsOnly=true&maxResultsByCountry=all&eventId=10229534&ageCategory=senior"
+times2002 = URL.2002times %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times2002
+
+
+
+```
+
+```{r}
+
+URL.2001times="https://worldathletics.org/records/toplists/road-running/marathon/all/women/senior/2001?regionType=world&page=1&bestResultsOnly=true&maxResultsByCountry=all&eventId=10229534&ageCategory=senior"
+times2001 = URL.2001times %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times2001
+
+```
+
+combining datasets to form main dataframe (2000 onwards)
+
+```{r}
+
+df_2001_onwards_fem<-rbind(times2001,times2002,times2003,times2004,times2005,times2006,times2007,times2008,times2009,times2010,times2011,times2012,times2013,times2014,times2015,times2016,times2017,times2018,times2019,times2020,times2021,times2022, times2023, deparse.level=0)
+
+df_2001_onwards_fem
+
+
+
+```
+
+###
+
+MENS TIMES
+
+```{r}
+URL.2001times_m="https://worldathletics.org/records/toplists/road-running/marathon/all/men/senior/2001?regionType=world&page=1&bestResultsOnly=true&maxResultsByCountry=all&eventId=10229634&ageCategory=senior"
+times2001_m = URL.2001times_m %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times2001_m
+
+
+```
+
+```{r}
+URL.2002times_m="https://worldathletics.org/records/toplists/road-running/marathon/all/men/senior/2002?regionType=world&page=1&bestResultsOnly=true&maxResultsByCountry=all&eventId=10229634&ageCategory=senior"
+times2002_m = URL.2002times_m %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times2002_m
+
+
+
+```
+
+```{r}
+URL.2003times_m="https://worldathletics.org/records/toplists/road-running/marathon/all/men/senior/2003?regionType=world&page=1&bestResultsOnly=true&maxResultsByCountry=all&eventId=10229634&ageCategory=senior"
+times2003_m = URL.2003times_m %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times2003_m
+
+
+
+
+```
+
+```{r}
+
+URL.2004times_m="https://worldathletics.org/records/toplists/road-running/marathon/all/men/senior/2004?regionType=world&page=1&bestResultsOnly=true&maxResultsByCountry=all&eventId=10229634&ageCategory=senior"
+times2004_m = URL.2004times_m %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times2004_m
+
+
+```
+
+```{r}
+URL.2005times_m="https://worldathletics.org/records/toplists/road-running/marathon/all/men/senior/2005?regionType=world&page=1&bestResultsOnly=true&maxResultsByCountry=all&eventId=10229634&ageCategory=senior"
+times2005_m = URL.2005times_m %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times2005_m
+
+
+
+```
+
+```{r}
+URL.2006times_m="https://worldathletics.org/records/toplists/road-running/marathon/all/men/senior/2006?regionType=world&page=1&bestResultsOnly=true&maxResultsByCountry=all&eventId=10229634&ageCategory=senior"
+times2006_m = URL.2006times_m %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times2006_m
+
+
+```
+
+```{r}
+
+URL.2007times_m="https://worldathletics.org/records/toplists/road-running/marathon/all/men/senior/2007?regionType=world&page=1&bestResultsOnly=true&maxResultsByCountry=all&eventId=10229634&ageCategory=senior"
+times2007_m = URL.2007times_m %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times2007_m
+
+```
+
+```{r}
+URL.2008times_m="https://worldathletics.org/records/toplists/road-running/marathon/all/men/senior/2008?regionType=world&page=1&bestResultsOnly=true&maxResultsByCountry=all&eventId=10229634&ageCategory=senior"
+times2008_m = URL.2008times_m %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times2008_m
+
+
+
+
+```
+
+```{r}
+
+URL.2009times_m="https://worldathletics.org/records/toplists/road-running/marathon/all/men/senior/2009?regionType=world&page=1&bestResultsOnly=true&maxResultsByCountry=all&eventId=10229634&ageCategory=senior"
+times2009_m = URL.2009times_m %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times2009_m
+
+
+```
+
+
+```{r}
+
+URL.2010times_m="https://worldathletics.org/records/toplists/road-running/marathon/all/men/senior/2010?regionType=world&page=1&bestResultsOnly=true&maxResultsByCountry=all&eventId=10229634&ageCategory=senior"
+times2010_m = URL.2010times_m %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times2010_m
+
+
+
+```
+
+```{r}
+
+URL.2011times_m="https://worldathletics.org/records/toplists/road-running/marathon/all/men/senior/2011?regionType=world&page=1&bestResultsOnly=true&maxResultsByCountry=all&eventId=10229634&ageCategory=senior"
+times2011_m = URL.2011times_m %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times2011_m
+
+
+```
+
+
+```{r}
+URL.2012times_m="https://worldathletics.org/records/toplists/road-running/marathon/all/men/senior/2012?regionType=world&page=1&bestResultsOnly=true&maxResultsByCountry=all&eventId=10229634&ageCategory=senior"
+times2012_m = URL.2012times_m %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times2012_m
+
+
+```
+
+
+```{r}
+
+URL.2013times_m="https://worldathletics.org/records/toplists/road-running/marathon/all/men/senior/2013?regionType=world&page=1&bestResultsOnly=true&maxResultsByCountry=all&eventId=10229634&ageCategory=senior"
+times2013_m = URL.2013times_m %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times2013_m
+
+```
+
+```{r}
+URL.2014times_m="https://worldathletics.org/records/toplists/road-running/marathon/all/men/senior/2014?regionType=world&page=1&bestResultsOnly=true&maxResultsByCountry=all&eventId=10229634&ageCategory=senior"
+times2014_m = URL.2014times_m %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times2014_m
+
+
+
+```
+
+```{r}
+URL.2015times_m="https://worldathletics.org/records/toplists/road-running/marathon/all/men/senior/2015?regionType=world&page=1&bestResultsOnly=true&maxResultsByCountry=all&eventId=10229634&ageCategory=senior"
+times2015_m = URL.2015times_m %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times2015_m
+
+
+```
+
+```{r}
+URL.2016times_m="https://worldathletics.org/records/toplists/road-running/marathon/all/men/senior/2016?regionType=world&page=1&bestResultsOnly=true&maxResultsByCountry=all&eventId=10229634&ageCategory=senior"
+times2016_m = URL.2016times_m %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times2016_m
+```
+
+```{r}
+URL.2017times_m="https://worldathletics.org/records/toplists/road-running/marathon/all/men/senior/2017?regionType=world&page=1&bestResultsOnly=true&maxResultsByCountry=all&eventId=10229634&ageCategory=senior"
+times2017_m = URL.2017times_m %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times2017_m
+
+
+```
+
+```{r}
+
+URL.2018times_m="https://worldathletics.org/records/toplists/road-running/marathon/all/men/senior/2018?regionType=world&page=1&bestResultsOnly=true&maxResultsByCountry=all&eventId=10229634&ageCategory=senior"
+times2018_m = URL.2018times_m %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times2018_m
+
+```
+
+```{r}
+URL.2019times_m="https://worldathletics.org/records/toplists/road-running/marathon/all/men/senior/2019?regionType=world&page=1&bestResultsOnly=true&maxResultsByCountry=all&eventId=10229634&ageCategory=senior"
+times2019_m = URL.2019times_m %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times2019_m
+
+
+
+```
+
+```{r}
+
+URL.2020times_m="https://worldathletics.org/records/toplists/road-running/marathon/all/men/senior/2020?regionType=world&page=1&bestResultsOnly=true&maxResultsByCountry=all&eventId=10229634&ageCategory=senior"
+times2020_m = URL.2020times_m %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times2020_m
+
+
+```
+
+```{r}
+URL.2021times_m="https://worldathletics.org/records/toplists/road-running/marathon/all/men/senior/2021?regionType=world&page=1&bestResultsOnly=true&maxResultsByCountry=all&eventId=10229634&ageCategory=senior"
+times2021_m = URL.2021times_m %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times2021_m
+
+
+
+```
+
+
+```{r}
+URL.2022times_m="https://worldathletics.org/records/toplists/road-running/marathon/all/men/senior/2022?regionType=world&page=1&bestResultsOnly=true&maxResultsByCountry=all&eventId=10229634&ageCategory=senior"
+times2022_m = URL.2022times_m %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times2022_m
+
+
+```
+
+```{r}
+URL.2023times_m="https://worldathletics.org/records/toplists/road-running/marathon/all/men/senior/2023?regionType=world&page=1&bestResultsOnly=true&maxResultsByCountry=all&eventId=10229634&ageCategory=senior"
+times2023_m = URL.2023times_m %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times2023_m
+
+```
+
+```{r}
+df_2001_onwards_male<-rbind(times2001_m,times2002_m,times2003_m,times2004_m,times2005_m,times2006_m,times2007_m,times2008_m,times2009_m,times2010_m,times2011_m,times2012_m,times2013_m,times2014_m,times2015_m,times2016_m,times2017_m,times2018_m,times2019_m,times2020_m,times2021_m,times2022_m, times2023_m, deparse.level=0)
+
+df_2001_onwards_male
+
+
+
+```
+
+```{r}
+URL.2000times_m="https://worldathletics.org/records/all-time-toplists/road-running/marathon/all/men/senior?regionType=world&page=1&bestResultsOnly=true&firstDay=1999-12-31&lastDay=2000-12-31&maxResultsByCountry=all&eventId=10229634&ageCategory=senior"
+times2000_m = URL.2000times_m %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times2000_m
+
+```
+
+```{r}
+URL.1999times_m="https://worldathletics.org/records/all-time-toplists/road-running/marathon/all/men/senior?regionType=world&page=1&bestResultsOnly=true&firstDay=1998-12-31&lastDay=1999-12-31&maxResultsByCountry=all&eventId=10229634&ageCategory=senior"
+times1999_m = URL.1999times_m %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times1999_m
+```
+
+```{r}
+URL.1998times_m="https://worldathletics.org/records/all-time-toplists/road-running/marathon/all/men/senior?regionType=world&page=1&bestResultsOnly=true&firstDay=1997-12-31&lastDay=1998-12-31&maxResultsByCountry=all&eventId=10229634&ageCategory=senior"
+times1998_m = URL.1998times_m %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times1998_m
+```
+
+```{r}
+URL.1997times_m="https://worldathletics.org/records/all-time-toplists/road-running/marathon/all/men/senior?regionType=world&page=1&bestResultsOnly=true&firstDay=1996-12-31&lastDay=1997-12-31&maxResultsByCountry=all&eventId=10229634&ageCategory=senior"
+times1997_m = URL.1997times_m %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times1997_m
+```
+
+
+```{r}
+URL.1996times_m="https://worldathletics.org/records/all-time-toplists/road-running/marathon/all/men/senior?regionType=world&page=1&bestResultsOnly=true&firstDay=1995-12-31&lastDay=1996-12-31&maxResultsByCountry=all&eventId=10229634&ageCategory=senior"
+times1996_m = URL.1996times_m %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times1996_m
+
+```
+
+```{r}
+URL.1995times_m="https://worldathletics.org/records/all-time-toplists/road-running/marathon/all/men/senior?regionType=world&page=1&bestResultsOnly=true&firstDay=1994-12-31&lastDay=1995-12-31&maxResultsByCountry=all&eventId=10229634&ageCategory=senior"
+times1995_m = URL.1995times_m %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times1995_m
+```
+
+```{r}
+URL.1994times_m="https://worldathletics.org/records/all-time-toplists/road-running/marathon/all/men/senior?regionType=world&page=1&bestResultsOnly=true&firstDay=1993-12-31&lastDay=1994-12-31&maxResultsByCountry=all&eventId=10229634&ageCategory=senior"
+times1994_m = URL.1994times_m %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times1994_m
+
+```
+
+
+```{r}
+URL.1993times_m="https://worldathletics.org/records/all-time-toplists/road-running/marathon/all/men/senior?regionType=world&page=1&bestResultsOnly=true&firstDay=1992-12-31&lastDay=1993-12-31&maxResultsByCountry=all&eventId=10229634&ageCategory=senior"
+times1993_m = URL.1993times_m %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times1993_m
+
+```
+
+```{r}
+URL.1992times_m="https://worldathletics.org/records/all-time-toplists/road-running/marathon/all/men/senior?regionType=world&page=1&bestResultsOnly=true&firstDay=1991-12-31&lastDay=1992-12-31&maxResultsByCountry=all&eventId=10229634&ageCategory=senior"
+times1992_m = URL.1992times_m %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times1992_m
+
+
+```
+
+
+```{r}
+URL.1991times_m="https://worldathletics.org/records/all-time-toplists/road-running/marathon/all/men/senior?regionType=world&page=1&bestResultsOnly=true&firstDay=1990-12-31&lastDay=1991-12-31&maxResultsByCountry=all&eventId=10229634&ageCategory=senior"
+times1991_m = URL.1991times_m %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times1991_m
+
+```
+
+
+```{r}
+URL.1990times_m="https://worldathletics.org/records/all-time-toplists/road-running/marathon/all/men/senior?regionType=world&page=1&bestResultsOnly=true&firstDay=1989-12-31&lastDay=1990-12-31&maxResultsByCountry=all&eventId=10229634&ageCategory=senior"
+times1990_m = URL.1990times_m %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times1990_m
+```
+
+```{r}
+URL.1989times_m="https://worldathletics.org/records/all-time-toplists/road-running/marathon/all/men/senior?regionType=world&page=1&bestResultsOnly=true&firstDay=1988-12-31&lastDay=1989-12-31&maxResultsByCountry=all&eventId=10229634&ageCategory=senior"
+times1989_m = URL.1989times_m %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times1989_m
+```
+Kiptum is running Rotterdam this spring...
+```{r}
+URL.1988times_m="https://worldathletics.org/records/all-time-toplists/road-running/marathon/all/men/senior?regionType=world&page=1&bestResultsOnly=true&firstDay=1987-12-31&lastDay=1988-12-31&maxResultsByCountry=all&eventId=10229634&ageCategory=senior"
+times1988_m = URL.1988times_m %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times1988_m
+
+```
+
+```{r}
+URL.1987times_m="https://worldathletics.org/records/all-time-toplists/road-running/marathon/all/men/senior?regionType=world&page=1&bestResultsOnly=true&firstDay=1986-12-31&lastDay=1987-12-31&maxResultsByCountry=all&eventId=10229634&ageCategory=senior"
+times1987_m = URL.1987times_m %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times1987_m
+```
+
+```{r}
+URL.1986times_m="https://worldathletics.org/records/all-time-toplists/road-running/marathon/all/men/senior?regionType=world&page=1&bestResultsOnly=true&firstDay=1985-12-31&lastDay=1986-12-31&maxResultsByCountry=all&eventId=10229634&ageCategory=senior"
+times1986_m = URL.1986times_m %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times1986_m
+
+```
+
+```{r}
+URL.1985times_m="https://worldathletics.org/records/all-time-toplists/road-running/marathon/all/men/senior?regionType=world&page=1&bestResultsOnly=true&firstDay=1984-12-31&lastDay=1985-12-31&maxResultsByCountry=all&eventId=10229634&ageCategory=senior"
+times1985_m = URL.1985times_m %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times1985_m
+
+```
+
+```{r}
+URL.1984times_m="https://worldathletics.org/records/all-time-toplists/road-running/marathon/all/men/senior?regionType=world&page=1&bestResultsOnly=true&firstDay=1983-12-31&lastDay=1984-12-31&maxResultsByCountry=all&eventId=10229634&ageCategory=senior"
+times1984_m = URL.1984times_m %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times1984_m
+```
+
+```{r}
+URL.1983times_m="https://worldathletics.org/records/all-time-toplists/road-running/marathon/all/men/senior?regionType=world&page=1&bestResultsOnly=true&firstDay=1982-12-31&lastDay=1983-12-31&maxResultsByCountry=all&eventId=10229634&ageCategory=senior"
+times1983_m = URL.1983times_m %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times1983_m
+```
+
+```{r}
+URL.1982times_m="https://worldathletics.org/records/all-time-toplists/road-running/marathon/all/men/senior?regionType=world&page=1&bestResultsOnly=true&firstDay=1981-12-31&lastDay=1982-12-31&maxResultsByCountry=all&eventId=10229634&ageCategory=senior"
+times1982_m = URL.1982times_m %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times1982_m
+```
+
+```{r}
+URL.1981times_m="https://worldathletics.org/records/all-time-toplists/road-running/marathon/all/men/senior?regionType=world&page=1&bestResultsOnly=true&firstDay=1980-12-31&lastDay=1981-12-31&maxResultsByCountry=all&eventId=10229634&ageCategory=senior"
+times1981_m = URL.1981times_m %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times1981_m
+```
+
+
+```{r}
+df_1981_onwards_men<- rbind(times1981_m, times1982_m, times1983_m, times1984_m, times1985_m, times1986_m, times1987_m, times1988_m, times1989_m, times1990_m, times1991_m, times1992_m, times1993_m, times1994_m, times1995_m, times1996_m, times1997_m, times1998_m, times1999_m, times2000_m, times2001_m, times2002_m, times2003_m, times2004_m, times2005_m, times2006_m, times2007_m, times2008_m, times2009_m, times2010_m, times2011_m, times2012_m, times2013_m, times2014_m, times2015_m, times2016_m, times2017_m, times2018_m, times2019_m, times2020_m, times2021_m, times2022_m, times2023_m, deparse.level=0)
+
+df_1981_onwards_men
+```
+
+
+
+
+convert Mark to be times in seconds for purpose of the same units
+
+
+```{r}
+
+
+
+df_2001_onwards_fem$race_time_seconds <- sapply(strsplit(df_2001_onwards_fem$Mark, ":"), function(x) sum(as.numeric(x) * c(3600, 60, 1)))
+
+
+print(df_2001_onwards_fem)
+
+```
+
+
+###
+
+Convert DOB into a format that would allow for easy age calculation
+```{r}
+
+#install.packages("lubridate")
+library(lubridate)
+
+df_2001_onwards_fem$DOB <- as.Date(df_2001_onwards_fem$DOB, format = "%d %b %Y")
+
+df_2001_onwards_fem
+
+```
+
+
+
+
+
+
+```{r}
+
+edited_2001_fem = subset(df_2001_onwards_fem, select = -c(WIND))
+
+
+edited_2001_fem_df2 <- edited_2001_fem[,-7]
+edited_2001_fem_df2
+```
+
+
+
+```{r}
+
+URL.1981times="https://worldathletics.org/records/all-time-toplists/road-running/marathon/all/women/senior?regionType=world&page=1&bestResultsOnly=true&firstDay=1899-12-31&lastDay=1981-12-31&maxResultsByCountry=all&eventId=10229534&ageCategory=senior"
+times1981 = URL.1981times %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times1981
+```
+
+
+```{r}
+URL.1983times="https://worldathletics.org/records/all-time-toplists/road-running/marathon/all/women/senior?regionType=world&page=1&bestResultsOnly=true&firstDay=1981-12-31&lastDay=1983-12-31&maxResultsByCountry=all&eventId=10229534&ageCategory=senior"
+times1983 = URL.1983times %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times1983
+
+```
+
+```{r}
+
+URL.1985times="https://worldathletics.org/records/all-time-toplists/road-running/marathon/all/women/senior?regionType=world&page=1&bestResultsOnly=true&firstDay=1983-12-31&lastDay=1985-12-31&maxResultsByCountry=all&eventId=10229534&ageCategory=senior"
+times1985 = URL.1985times %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times1985
+
+```
+
+```{r}
+URL.1987times="https://worldathletics.org/records/all-time-toplists/road-running/marathon/all/women/senior?regionType=world&page=1&bestResultsOnly=true&firstDay=1985-12-31&lastDay=1987-12-31&maxResultsByCountry=all&eventId=10229534&ageCategory=senior"
+times1987 = URL.1987times %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times1987
+```
+
+```{r}
+URL.1989times="https://worldathletics.org/records/all-time-toplists/road-running/marathon/all/women/senior?regionType=world&page=1&bestResultsOnly=true&firstDay=1987-12-31&lastDay=1989-12-31&maxResultsByCountry=all&eventId=10229534&ageCategory=senior"
+times1989 = URL.1989times %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times1989
+```
+
+```{r}
+URL.1989times="https://worldathletics.org/records/all-time-toplists/road-running/marathon/all/women/senior?regionType=world&page=1&bestResultsOnly=true&firstDay=1987-12-31&lastDay=1989-12-31&maxResultsByCountry=all&eventId=10229534&ageCategory=senior"
+times1989 = URL.1989times %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times1989
+
+
+```
+
+```{r}
+URL.1992times="https://worldathletics.org/records/all-time-toplists/road-running/marathon/all/women/senior?regionType=world&page=1&bestResultsOnly=true&firstDay=1989-12-31&lastDay=1992-12-31&maxResultsByCountry=all&eventId=10229534&ageCategory=senior"
+times1992 = URL.1992times %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times1992
+```
+
+```{r}
+URL.1994times="https://worldathletics.org/records/all-time-toplists/road-running/marathon/all/women/senior?regionType=world&page=1&bestResultsOnly=true&firstDay=1992-12-31&lastDay=1994-12-31&maxResultsByCountry=all&eventId=10229534&ageCategory=senior"
+times1994 = URL.1994times %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times1994
+```
+```{r}
+
+URL.1994times="https://worldathletics.org/records/all-time-toplists/road-running/marathon/all/women/senior?regionType=world&page=1&bestResultsOnly=true&firstDay=1992-12-31&lastDay=1994-12-31&maxResultsByCountry=all&eventId=10229534&ageCategory=senior"
+times1994 = URL.1994times %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times1994
+```
+
+```{r}
+
+URL.1995times="https://worldathletics.org/records/all-time-toplists/road-running/marathon/all/women/senior?regionType=world&page=1&bestResultsOnly=true&firstDay=1994-12-31&lastDay=1995-12-31&maxResultsByCountry=all&eventId=10229534&ageCategory=senior"
+times1995 = URL.1995times %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times1995
+```
+
+```{r}
+URL.1996times="https://worldathletics.org/records/all-time-toplists/road-running/marathon/all/women/senior?regionType=world&page=1&bestResultsOnly=true&firstDay=1995-12-31&lastDay=1996-12-31&maxResultsByCountry=all&eventId=10229534&ageCategory=senior"
+times1996 = URL.1996times %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times1996
+
+```
+
+```{r}
+URL.1997times="https://worldathletics.org/records/all-time-toplists/road-running/marathon/all/women/senior?regionType=world&page=1&bestResultsOnly=true&firstDay=1996-12-31&lastDay=1997-12-31&maxResultsByCountry=all&eventId=10229534&ageCategory=senior"
+times1997 = URL.1997times %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times1997
+```
+
+```{r}
+URL.1998times="https://worldathletics.org/records/all-time-toplists/road-running/marathon/all/women/senior?regionType=world&page=1&bestResultsOnly=true&firstDay=1997-12-31&lastDay=1998-12-31&maxResultsByCountry=all&eventId=10229534&ageCategory=senior"
+times1998 = URL.1998times %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times1998
+```
+
+```{r}
+URL.1999times="https://worldathletics.org/records/all-time-toplists/road-running/marathon/all/women/senior?regionType=world&page=1&bestResultsOnly=true&firstDay=1998-12-31&lastDay=1999-12-31&maxResultsByCountry=all&eventId=10229534&ageCategory=senior"
+times1999 = URL.1999times %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times1999
+```
+
+```{r}
+URL.2000times="https://worldathletics.org/records/all-time-toplists/road-running/marathon/all/women/senior?regionType=world&page=1&bestResultsOnly=true&firstDay=1999-12-31&lastDay=2000-12-31&maxResultsByCountry=all&eventId=10229534&ageCategory=senior"
+times2000 = URL.2000times %>%
+  read_html() %>%
+  html_table(fill=TRUE) %>%
+  .[[1]]
+times2000
+```
+
+
+
+
+
+
+change date column to just be the year that the time was run 
+```{r}
+
+
+library(lubridate)
+
+
+
+
+# Convert the 'Date_Column' to Date format
+edited_2001_fem_df2$Date <- dmy(edited_2001_fem_df2$Date)
+
+# Extract only the year in the existing column
+edited_2001_fem_df2$Date <- year(edited_2001_fem_df2$Date)
+
+
+edited_2001_fem_df2
+
+
+
+```
+
+
+```{r}
+df_1981_onwards_fem<-rbind(times1981, times1983,times1985, times1987,times1989,times1992, times1994,times1995, times1996,times1997, times1998,times1999,times2000,times2001,times2002,times2003,times2004,times2005,times2006,times2007,times2008,times2009,times2010,times2011,times2012,times2013,times2014,times2015,times2016,times2017,times2018,times2019,times2020,times2021,times2022, times2023, deparse.level=0)
+
+df_1981_onwards_fem
+
+```
+
+
+```{r}
+
+df_1981_onwards_fem$DOB <- as.Date(df_1981_onwards_fem$DOB, format = "%d %b %Y")
+
+df_1981_onwards_fem
+
+
+```
+
+```{r}
+df_1981_onwards_fem$race_time_seconds <- sapply(strsplit(df_1981_onwards_fem$Mark, ":"), function(x) sum(as.numeric(x) * c(3600, 60, 1)))
+
+
+print(df_1981_onwards_fem)
+
+```
+
+```{r}
+edited_1981_fem = subset(df_1981_onwards_fem, select = -c(WIND))
+
+
+edited_1981_fem_df2 <- edited_1981_fem[,-7]
+edited_1981_fem_df2
+
+
+
+
+```
+
+
+
+```{r}
+library(lubridate)
+
+
+
+
+# Convert the 'Date_Column' to Date format
+edited_1981_fem_df2$Date <- dmy(edited_1981_fem_df2$Date)
+
+# Extract only the year in the existing column
+edited_1981_fem_df2$Date <- year(edited_1981_fem_df2$Date)
+
+
+edited_1981_fem_df2
+
+
+
+
+
+```
+
+
+
+
+```{r}
+filtered_data <-edited_2001_fem_df2  %>%
+  filter(as.integer(Date) == 2005) %>%
+  arrange(race_time_seconds) %>%
+  head(50)
+
+# Display the filtered DataFrame
+print(filtered_data)
+
+
+```
+
+
+Top 50
+
+```{r}
+# Initialize an empty list to store filtered data for each year
+filtered_data_list <- list()
+
+# Iterate through years from 2001 to 2023
+for (year in 2001:2023) {
+  filtered_data <- edited_2001_fem_df2 %>%
+    filter(as.integer(Date) == year) %>%
+    arrange(race_time_seconds) %>%
+    head(50)
+  
+  # Store filtered data in the list
+  filtered_data_list[[as.character(year)]] <- filtered_data
+}
+
+# Display the filtered data for each year
+#for (year in names(filtered_data_list)) {
+  #print(paste("Year:", year))
+  #print(filtered_data_list[[year]])
+  #cat("\n")
+
+
+#}
+
+
+
+#combine data for top 50 of each year
+combined_data_top50 <- bind_rows(filtered_data_list)
+
+# Display the combined dataframe
+#combined_data_top50
+```
+
+
+Top 25 (2001-2023) Females
+```{r}
+
+# Initialize an empty list to store filtered data for each year
+filtered_data_list_2 <- list()
+
+# Iterate through years from 2001 to 2023
+for (year in 2001:2023) {
+  filtered_data_2 <- edited_2001_fem_df2 %>%
+    filter(as.integer(Date) == year) %>%
+    arrange(race_time_seconds) %>%
+    head(25)
+  
+  # Store filtered data in the list
+  filtered_data_list_2[[as.character(year)]] <- filtered_data_2
+}
+
+combined_data_top25 <- bind_rows(filtered_data_list_2)
+#combined_data_top25
+
+```
+
+Top 10 (2001-2023)  Females
+```{r}
+# Initialize an empty list to store filtered data for each year
+filtered_data_list_3 <- list()
+
+# Iterate through years from 2001 to 2023
+for (year in 2001:2023) {
+  filtered_data_3 <- edited_2001_fem_df2 %>%
+    filter(as.integer(Date) == year) %>%
+    arrange(race_time_seconds) %>%
+    head(10)
+  
+  # Store filtered data in the list
+  filtered_data_list_3[[as.character(year)]] <- filtered_data_3
+}
+
+combined_data_top10 <- bind_rows(filtered_data_list_3)
+combined_data_top10
+
+
+
+
+```
+
+```{r}
+#FUNCTION TO SCRAPE TOP TIMES PER GIVEN AMOUNT OF YEARS 
+
+# Initialize an empty list to store filtered data for each year
+filtered_data_list_4 <- list()
+
+# Iterate through years from 2001 to 2023
+for (year in 2001:2023) {
+  filtered_data_4 <- edited_2001_fem_df2 %>%
+    filter(as.integer(Date) == year) %>%
+    arrange(race_time_seconds) %>%
+    head(5)
+  
+  # Store filtered data in the list
+  filtered_data_list_4[[as.character(year)]] <- filtered_data_4
+}
+
+combined_data_top5 <- bind_rows(filtered_data_list_4)
+combined_data_top5
+
+
+
+
+```
+
+
+BASIC EDA (2001-2023 female)
+
+
+Now I am going to plot the times in seconds of the races against the years starting with 24 years of top 50 times to get an idea of shape,  then I will repeat the process in top 25 times each year, top 10 times, then top 5 times
+
+```{r}
+library(ggplot2)
+library(gridExtra)
+
+#built in r plot
+plot(race_time_seconds~Date, data=combined_data_top50)
+plot(race_time_seconds~Date, data=combined_data_top25)
+plot(race_time_seconds~Date, data=combined_data_top10)
+plot(race_time_seconds~Date, data=combined_data_top5)
+
+add_lowest_point <- function(df, color) {
+  lowest_points <- df %>%
+    group_by(Date) %>%
+    arrange(race_time_seconds) %>%
+    slice(1)  # Select the lowest point for each year
+  
+  geom_point(data = lowest_points, aes(Date, race_time_seconds), color = color, size = 3)
+}
+
+#ggplot for aesthetic & comparison
+plot_top_50_fem <- ggplot(combined_data_top50, aes(Date, race_time_seconds)) + geom_point()+
+  add_lowest_point(combined_data_top50, color = "red")+ ggtitle("Top 50 Female Marathon Times (2001-2023)")+coord_cartesian(ylim = c(7800, 9000)) 
+
+plot_top_25_fem <- ggplot(combined_data_top25, aes(Date, race_time_seconds)) +
+  add_lowest_point(combined_data_top25, color = "red") +geom_point()+ ggtitle("Top 25 Female Marathon Times (2001-2023)")+coord_cartesian(ylim = c(7800, 9000)) 
+
+plot_top_10_fem <- ggplot(combined_data_top10, aes(Date, race_time_seconds))+
+  add_lowest_point(combined_data_top10, color = "red") + geom_point()+  ggtitle("Top 10 Female Marathon Times (2001-2023)")+coord_cartesian(ylim = c(7800, 9000)) 
+
+plot_top_5_fem <- ggplot(combined_data_top5, aes(Date, race_time_seconds))+
+  add_lowest_point(combined_data_top5, color = "red") + geom_point()+ ggtitle("Top 5 Female Marathon Times (2001-2023)")+coord_cartesian(ylim = c(7800, 9000)) 
+
+
+
+grid.arrange(plot_top_50_fem, plot_top_25_fem,plot_top_10_fem,plot_top_5_fem, ncol=2)
+```
+
+Now how are the trends in the slower half?? 
+
+Slowest 50
+```{r}
+
+library(dplyr)
+
+# Initialize an empty list to store filtered data for each year
+filtered_data_list_50_slowest <- list()
+
+
+# Iterate through years from 2001 to 2023
+for (year in 2001:2023) {
+  filtered_data_50_slowest <- edited_2001_fem_df2 %>%
+    filter(as.integer(Date) == year) %>%
+    arrange(desc(race_time_seconds)) %>%
+    head(50)  # Take the 50 slowest times
+  
+  # Store filtered data in the list
+  filtered_data_list_50_slowest[[as.character(year)]] <- filtered_data_50_slowest
+}
+
+# Combine the filtered dataframes into one
+combined_data_top50_slowest <- bind_rows(filtered_data_list_50_slowest)
+
+# Display the combined dataframe
+combined_data_top50_slowest
+
+```
+
+Slowest 25
+```{r}
+filtered_data_list_25_slowest <- list()
+
+
+# Iterate through years from 2001 to 2023
+for (year in 2001:2023) {
+  filtered_data_25_slowest <- edited_2001_fem_df2 %>%
+    filter(as.integer(Date) == year) %>%
+    arrange(desc(race_time_seconds)) %>%
+    head(25)  
+  
+  # Store filtered data in the list
+  filtered_data_list_25_slowest[[as.character(year)]] <- filtered_data_25_slowest
+}
+
+# Combine the filtered dataframes into one
+combined_data_top25_slowest <- bind_rows(filtered_data_list_25_slowest)
+
+# Display the combined dataframe
+combined_data_top25_slowest
+```
+Slowest 10
+```{r}
+filtered_data_list_10_slowest <- list()
+
+
+# Iterate through years from 2001 to 2023
+for (year in 2001:2023) {
+  filtered_data_10_slowest <- edited_2001_fem_df2 %>%
+    filter(as.integer(Date) == year) %>%
+    arrange(desc(race_time_seconds)) %>%
+    head(10)  
+  
+  # Store filtered data in the list
+  filtered_data_list_10_slowest[[as.character(year)]] <- filtered_data_10_slowest
+}
+
+# Combine the filtered dataframes into one
+combined_data_top10_slowest <- bind_rows(filtered_data_list_10_slowest)
+
+# Display the combined dataframe
+combined_data_top10_slowest
+```
+
+```{r}
+filtered_data_list_5_slowest <- list()
+
+
+# Iterate through years from 2001 to 2023
+for (year in 2001:2023) {
+  filtered_data_5_slowest <- edited_2001_fem_df2 %>%
+    filter(as.integer(Date) == year) %>%
+    arrange(desc(race_time_seconds)) %>%
+    head(5)  
+  
+  # Store filtered data in the list
+  filtered_data_list_5_slowest[[as.character(year)]] <- filtered_data_5_slowest
+}
+
+# Combine the filtered dataframes into one
+combined_data_top5_slowest <- bind_rows(filtered_data_list_5_slowest)
+
+# Display the combined dataframe
+combined_data_top5_slowest
+
+
+```
+
+
+
+```{r}
+
+#built in r plot
+plot(race_time_seconds~Date, data=combined_data_top50_slowest)
+plot(race_time_seconds~Date, data=combined_data_top25_slowest)
+plot(race_time_seconds~Date, data=combined_data_top10_slowest)
+plot(race_time_seconds~Date, data=combined_data_top5_slowest)
+
+
+
+```
+
+```{r}
+add_highest_point <- function(df, color) {
+  highest_points <- df %>%
+    group_by(Date) %>%
+    arrange(desc(race_time_seconds)) %>%
+    slice(1)  # Select the highest point for each year
+  
+  geom_point(data = highest_points, aes(Date, race_time_seconds), color = color, size = 3)
+}
+
+#ggplot for aesthetic & comparison
+plot_top_50_fem_slowest <- ggplot(combined_data_top50_slowest, aes(Date, race_time_seconds))+
+  add_highest_point(combined_data_top50_slowest, color = "blue") + geom_point()+
+   ggtitle("Bottom 50 Female Marathon Times (2001-2023)")+coord_cartesian(ylim = c(8500, 9150)) 
+
+plot_top_25_fem_slowest <- ggplot(combined_data_top25_slowest, aes(Date, race_time_seconds))+
+  add_highest_point(combined_data_top50_slowest, color = "blue") +
+  geom_point()+ ggtitle("Bottom 25 Female Marathon Times (2001-2023)")+coord_cartesian(ylim = c(8500, 9150)) 
+
+plot_top_10_fem_slowest <- ggplot(combined_data_top10_slowest, aes(Date, race_time_seconds)) +
+  add_highest_point(combined_data_top50_slowest, color = "blue")+ geom_point()+  ggtitle("Bottom 10 Female Marathon Times (2001-2023)")+coord_cartesian(ylim = c(8500, 9150)) 
+
+plot_top_5_fem_slowest <- ggplot(combined_data_top5_slowest, aes(Date, race_time_seconds))+
+  add_highest_point(combined_data_top50_slowest, color = "blue")+
+   geom_point()+ ggtitle("Bottom 5 Female Marathon Times (2001-2023)")+coord_cartesian(ylim = c(8500, 9150)) 
+
+
+
+grid.arrange(plot_top_50_fem_slowest, plot_top_25_fem_slowest,plot_top_10_fem_slowest,plot_top_5_fem_slowest, ncol=2)
+
+
+
+
+```
+
+Top Plot, but closer so I can see it
+
+```{r}
+grid.arrange(plot_top_50_fem, plot_top_25_fem,plot_top_10_fem,plot_top_5_fem, ncol=2)
+
+
+
+```
+overlay top and bottom times on top of each other to see trend in delta
+
+Combined Top 5 and Bottom 5
+```{r}
+
+# Plot for both fastest and slowest times
+combined_plot_5 <- ggplot() +
+  add_lowest_point(combined_data_top5, color = "red") +
+  add_highest_point(combined_data_top5_slowest, color = "blue") +
+  geom_point(data = combined_data_top5, aes(Date, race_time_seconds), color = "green") +
+  geom_point(data = combined_data_top5_slowest, aes(Date, race_time_seconds), color = "black") +
+  ggtitle("Top 5 and Bottom 5 (out of top 100) Female Marathon Times (2001-2023)") +
+  coord_cartesian(ylim = c(7800, 9150))
+
+# Print the combined plot
+print(combined_plot_5)
+
+
+```
+
+
+
+```{r}
+
+# Plot for both fastest and slowest times
+combined_plot_10 <- ggplot() +
+  add_lowest_point(combined_data_top10, color = "red") +
+  add_highest_point(combined_data_top10_slowest, color = "blue") +
+  geom_point(data = combined_data_top10, aes(Date, race_time_seconds), color = "green") +
+  geom_point(data = combined_data_top10_slowest, aes(Date, race_time_seconds), color = "black") +
+  ggtitle("Top 10 and Bottom 10 (out of top 100) Female Marathon Times (2001-2023)") +
+  coord_cartesian(ylim = c(7800, 9150))
+
+# Print the combined plot
+print(combined_plot_10)
+
+
+combined_plot_25 <- ggplot() +
+  add_lowest_point(combined_data_top25, color = "red") +
+  add_highest_point(combined_data_top25_slowest, color = "blue") +
+  geom_point(data = combined_data_top25, aes(Date, race_time_seconds), color = "green") +
+  geom_point(data = combined_data_top25_slowest, aes(Date, race_time_seconds), color = "black") +
+  ggtitle("Top 25 and Bottom 25 (out of top 100) Female Marathon Times (2001-2023)") +
+  coord_cartesian(ylim = c(7800, 9150))
+
+# Print the combined plot
+print(combined_plot_25)
+
+
+combined_plot_50 <- ggplot() +
+  add_lowest_point(combined_data_top50, color = "red") +
+  add_highest_point(combined_data_top50_slowest, color = "blue") +
+  geom_point(data = combined_data_top50, aes(Date, race_time_seconds), color = "green") +
+  geom_point(data = combined_data_top50_slowest, aes(Date, race_time_seconds), color = "black") +
+  ggtitle("Top 50 and Bottom 50 (out of top 100) Female Marathon Times (2001-2023)") +
+  coord_cartesian(ylim = c(7800, 9150))
+
+# Print the combined plot
+print(combined_plot_50)
+```
+
+```{r}
+
+grid.arrange(combined_plot_5, combined_plot_10,combined_plot_25,combined_plot_50, ncol=2)
+
+```
+
+```{r}
+# Initialize an empty list to store filtered data for each year
+filtered_data_list_5 <- list()
+
+# Iterate through years from 2001 to 2023
+for (year in 1979:2023) {
+  filtered_data_5 <- edited_1981_fem_df2 %>%
+    filter(as.integer(Date) == year) %>%
+    arrange(race_time_seconds) %>%
+    head(1)
+  
+  # Store filtered data in the list
+  filtered_data_list_5[[as.character(year)]] <- filtered_data_5
+}
+
+combined_data_top_1979 <- bind_rows(filtered_data_list_5)
+combined_data_top_1979
+
+
+
+```
+
+```{r}
+
+# Initialize an empty list to store filtered data for each year
+filtered_data_list_6 <- list()
+
+# Iterate through years from 2001 to 2023
+for (year in 1982:2023) {
+  filtered_data_6 <- edited_1981_fem_df2 %>%
+    filter(as.integer(Date) == year) %>%
+    arrange(race_time_seconds) %>%
+    head(3)
+  
+  # Store filtered data in the list
+  filtered_data_list_6[[as.character(year)]] <- filtered_data_6
+}
+
+combined_data_top3_1982 <- bind_rows(filtered_data_list_6)
+combined_data_top3_1982
+
+
+```
+
+
+```{r}
+plot_top_fem_1979 <- ggplot(combined_data_top_1979, aes(Date, race_time_seconds))+ geom_point()+ ggtitle("Top Female Marathon Times (1979-2023)")+coord_cartesian(ylim = c(7800, 9200)) 
+
+plot_top_fem_1979
+
+```
+
+
+```{r}
+plot_top_fem_1982 <- ggplot(combined_data_top3_1982, aes(Date, race_time_seconds))+add_lowest_point(combined_data_top3_1982, color = "red")+ geom_point()+ ggtitle("Top 3 Female Marathon Times (1982-2023)")+coord_cartesian(ylim = c(7800, 9200)) 
+
+plot_top_fem_1982
+
+
+
+```
+
+
+```{r}
+filtered_data_list_slowest <- list()
+
+for (year in 1982:2023) {
+  filtered_data_slowest <- edited_1981_fem_df2 %>%
+    filter(as.integer(Date) == year) %>%
+    arrange(desc(race_time_seconds)) %>%
+    head(3)  
+  
+  # Store filtered data in the list
+  filtered_data_list_slowest[[as.character(year)]] <- filtered_data_slowest
+}
+
+# Combine the filtered dataframes into one
+combined_data_slowest_1982 <- bind_rows(filtered_data_list_slowest)
+
+# Display the combined dataframe
+combined_data_slowest_1982
+
+
+```
+
+
+```{r}
+combined_plot_slow <- ggplot() +
+  add_lowest_point(combined_data_top3_1982, color = "red") +
+  add_highest_point(combined_data_slowest_1982, color = "blue") +
+  geom_point(data = combined_data_top3_1982, aes(Date, race_time_seconds), color = "green") +
+  geom_point(data = combined_data_slowest_1982, aes(Date, race_time_seconds), color = "black") +
+  ggtitle("Top 3 and Bottom 3 Female Marathon Times (1982-2023)") +
+  coord_cartesian(ylim = c(7800, 9300))
+
+# Print the combined plot
+print(combined_plot_slow)
+
+```
+
+
+```{r}
+
+combined_plot_nat <- ggplot() +
+  geom_point(data = combined_data_top3_1982, aes(x = Date, y = race_time_seconds, color = Nat)) +
+  geom_point(data = combined_data_slowest_1982, aes(x = Date, y = race_time_seconds, color = Nat)) +
+  labs(title = "Top 3 and Bottom 3 Female Marathon Times (1982-2023)",
+       x = "Date",
+       y = "Race Time (seconds)") +
+  coord_cartesian(ylim = c(7800, 9300))
+
+# Print the combined plot
+print(combined_plot_nat)
+
+
+```
+
+Here I would like to see where in the world the top performance have hailed from in the last 40 years, --> shift in dominance??
+
+```{r}
+# Define a custom color palette for regions
+region_palette <- c("Asia" = "red", "Europe" = "blue", "Africa" = "green", "Americas" = "orange", "Oceania" = "purple")
+
+
+# Extend the lookup table with the new nationalities and their regions
+nationality_to_region_lookup <- c(
+  "NZL" = "Oceania",
+  "GBR" = "Europe",
+  "USA" = "Americas",
+  "NED" = "Europe",
+  "CAN" = "Americas",
+  "FRG" = "Europe",
+  "IRL" = "Europe",
+  "ITA" = "Europe",
+  "SUI" = "Europe",
+  "FRA" = "Europe",
+  "URS" = "Europe",
+  "POR" = "Europe",
+  "GDR" = "Europe",
+  "AUS" = "Oceania",
+  "JPN" = "Asia",
+  "HUN" = "Europe",
+  "MEX" = "Americas",
+  "CHN" = "Asia",
+  "POL" = "Europe",
+  "KOR" = "Asia",
+  "DEN" = "Europe",
+  "FIN" = "Europe",
+  "BEL" = "Europe",
+  "SWE" = "Europe",
+  "PRK" = "Asia",
+  "LUX" = "Europe",
+  "ROU" = "Europe",
+  "RSA" = "Africa",
+  "GRE" = "Europe",
+  "BLR" = "Europe",
+  "GER" = "Europe",
+  "RUS" = "Europe",
+  "BRA" = "Americas",
+  "TCH" = "Europe",
+  "ESP" = "Europe",
+  "UKR" = "Europe",
+  "KEN" = "Africa",
+  "SGP" = "Asia",
+  "YUG" = "Europe",
+  "MDA" = "Europe",
+  "CZE" = "Europe",
+  "MAR" = "Africa",
+  "LTU" = "Europe",
+  "EST" = "Europe",
+  "INA" = "Asia",
+  "ETH" = "Africa",
+  "CHI" = "Americas",
+  "ARG" = "Americas",
+  "KGZ" = "Asia",
+  "TUR" = "Asia",
+  "ECU" = "Americas",
+  "TAN" = "Africa",
+  "SLO" = "Europe",
+  "LAT" = "Europe",
+  "SCG" = "Europe",
+  "SRB" = "Europe",
+  "ALG" = "Africa",
+  "ZIM" = "Africa",
+  "BRN" = "Asia",
+  "NAM" = "Africa",
+  "CRO" = "Europe",
+  "PER" = "Americas",
+  "BDI" = "Africa",
+  "ISR" = "Asia",
+  "UGA" = "Africa",
+  "MGL" = "Asia",
+  "ERI" = "Africa",
+  "NOR"= "Europe"
+)
+
+
+map_nationality_to_region <- function(nat) {
+  region <- nationality_to_region_lookup[nat]
+  return(region)
+}
+
+
+
+# Apply the mapping function to both data frames
+combined_data_top3_1982$Region <- map_nationality_to_region(combined_data_top3_1982$Nat)
+
+
+# Create the combined plot with distinct colors for regions of the world
+combined_plot_nat_region <- ggplot() +
+  geom_point(data = combined_data_top3_1982, aes(x = Date, y = race_time_seconds, color = Region)) +
+  scale_color_manual(values = region_palette) +  # Set the color palette
+  labs(title = "Top 3 Female Marathon Times (1982-2023) By Region of The World",
+       x = "Date",
+       y = "Race Time (seconds)") +
+  coord_cartesian(ylim = c(7800, 9300))
+
+
+print(combined_plot_nat_region)
+```
+
+```{r}
+#library(dplyr)
+
+#unique_nationalities <- edited_1981_fem_df2 %>% distinct(Nat)
+#print(unique_nationalities)
+
+
+```
+
+SAME EDA, but with Men
+
+```{r}
+#change format of date of birth --> make it easier to do age calculation in the future
+df_1981_onwards_men$DOB <- as.Date(df_1981_onwards_men$DOB, format = "%d %b %Y")
+
+df_1981_onwards_men
+
+```
+
+```{r}
+#Change time to same units: seconds
+df_1981_onwards_men$race_time_seconds <- sapply(strsplit(df_1981_onwards_men$Mark, ":"), function(x) sum(as.numeric(x) * c(3600, 60, 1)))
+
+print(df_1981_onwards_men)
+
+```
+
+```{r}
+#cut out the columns that contain only NA/are irrelevant (WIND)
+edited_1981_men = subset(df_1981_onwards_men, select = -c(WIND))
+
+
+edited_1981_men_df2 <- edited_1981_men[,-7]
+
+
+library(lubridate)
+
+
+
+
+# Convert the 'Date_Column' to Date format
+edited_1981_men_df2$Date <- dmy(edited_1981_men_df2$Date)
+
+# Extract only the year in the existing column
+edited_1981_men_df2$Date <- year(edited_1981_men_df2$Date)
+
+
+edited_1981_men_df2
+```
+
+Top 50 Mens times (1981-2023)
+
+```{r}
+# Initialize an empty list to store filtered data for each year
+filtered_data_list_1981m_50 <- list()
+
+# Iterate through years from 2001 to 2023
+for (year in 1981:2023) {
+  filtered_data <- edited_1981_men_df2 %>%
+    filter(as.integer(Date) == year) %>%
+    arrange(race_time_seconds) %>%
+    head(50)
+  
+  # Store filtered data in the list
+  filtered_data_list_1981m_50[[as.character(year)]] <- filtered_data
+}
+
+# Display the filtered data for each year
+#for (year in names(filtered_data_list)) {
+  #print(paste("Year:", year))
+  #print(filtered_data_list[[year]])
+  #cat("\n")
+
+
+#}
+
+
+
+#combine data for top 50 of each year
+combined_data_top50_men1981 <- bind_rows(filtered_data_list_1981m_50)
+
+# Display the combined dataframe
+#combined_data_top50_men1981
+```
+
+
+Top 25 (1981-2023) Men
+```{r}
+
+# Initialize an empty list to store filtered data for each year
+filtered_data_list_1981m_25 <- list()
+
+# Iterate through years from 1981 to 2023
+for (year in 1981:2023) {
+  filtered_data_2 <- edited_1981_men_df2 %>%
+    filter(as.integer(Date) == year) %>%
+    arrange(race_time_seconds) %>%
+    head(25)
+  
+  # Store filtered data in the list
+  filtered_data_list_1981m_25[[as.character(year)]] <- filtered_data_2
+}
+
+combined_data_top25_men1981 <- bind_rows(filtered_data_list_1981m_25)
+combined_data_top25_men1981
+
+```
+
+Top 10 (1981-2023)  Men
+```{r}
+# Initialize an empty list to store filtered data for each year
+filtered_data_list_1981m_10 <- list()
+
+# Iterate through years from 1981 to 2023
+for (year in 1981:2023) {
+  filtered_data_3 <- edited_1981_men_df2 %>%
+    filter(as.integer(Date) == year) %>%
+    arrange(race_time_seconds) %>%
+    head(10)
+  
+  # Store filtered data in the list
+  filtered_data_list_1981m_10[[as.character(year)]] <- filtered_data_3
+}
+
+combined_data_top10_men1981 <- bind_rows(filtered_data_list_1981m_10)
+combined_data_top10_men1981
+```
+
+
+TOP 5 TIMES MEN 1981-2023
+```{r}
+
+filtered_data_list_1981m_5 <- list()
+
+# Iterate through years from 1981 to 2023 (mens)
+for (year in 1981:2023) {
+  filtered_data_11 <- edited_1981_men_df2 %>%
+    filter(as.integer(Date) == year) %>%
+    arrange(race_time_seconds) %>%
+    head(5)
+  
+  # Store filtered data in the list
+  filtered_data_list_1981m_5[[as.character(year)]] <- filtered_data_11
+}
+
+combined_data_top5_men1981 <- bind_rows(filtered_data_list_1981m_5)
+combined_data_top5_men1981
+```
+
+
+```{r}
+filtered_data_list_1981m_3 <- list()
+
+# Iterate through years from 1981 to 2023 (mens)
+for (year in 1981:2023) {
+  filtered_data_11 <- edited_1981_men_df2 %>%
+    filter(as.integer(Date) == year) %>%
+    arrange(race_time_seconds) %>%
+    head(3)
+  
+  # Store filtered data in the list
+  filtered_data_list_1981m_3[[as.character(year)]] <- filtered_data_11
+}
+
+combined_data_top3_men1981 <- bind_rows(filtered_data_list_1981m_3)
+combined_data_top3_men1981
+
+
+
+
+```
+TOP OVERALL MENS MARATHON 1981-2023
+```{r}
+filtered_data_list_1981m_1 <- list()
+
+# Iterate through years from 1981 to 2023 (mens)
+for (year in 1981:2023) {
+  filtered_data_11 <- edited_1981_men_df2 %>%
+    filter(as.integer(Date) == year) %>%
+    arrange(race_time_seconds) %>%
+    head(1)
+  
+  # Store filtered data in the list
+  filtered_data_list_1981m_1[[as.character(year)]] <- filtered_data_11
+}
+
+combined_data_topoverall_men1981 <- bind_rows(filtered_data_list_1981m_1)
+combined_data_topoverall_men1981
+
+```
+```{r}
+plot_top_men_1981 <- ggplot(combined_data_topoverall_men1981, aes(Date, race_time_seconds))+add_lowest_point(combined_data_topoverall_men1981, color = "red")+ geom_point()+ ggtitle("Top Male Marathon Times (1981-2023)")
+
+plot_top_men_1981
+
+```
+overlay men and womens to directly compare shape
+```{r}
+# Initialize an empty list to store filtered data for each year
+filtered_data_list_topoverall_fem1981 <- list()
+
+# Iterate through years from 2001 to 2023
+for (year in 1981:2023) {
+  filtered_data_5 <- edited_1981_fem_df2 %>%
+    filter(as.integer(Date) == year) %>%
+    arrange(race_time_seconds) %>%
+    head(1)
+  
+  # Store filtered data in the list
+  filtered_data_list_topoverall_fem1981[[as.character(year)]] <- filtered_data_5
+}
+
+combined_data_topoverall_fem1981 <- bind_rows(filtered_data_list_topoverall_fem1981)
+combined_data_topoverall_fem1981
+
+
+combined_plot_fem_vs_male <- ggplot() +
+  geom_point(data = combined_data_topoverall_men1981, aes(Date, race_time_seconds), color = "green") +
+  geom_point(data = combined_data_topoverall_fem1981, aes(Date, race_time_seconds), color = "black") +
+  ggtitle("Top Male Versus Female Marathon Times (1981-2023)") +
+  coord_cartesian(ylim = c(7200, 9100))
+
+combined_plot_fem_vs_male
+
+
+
+
+```
+```{r}
+# Define a custom color palette for regions
+region_palette <- c("Asia" = "red", "Europe" = "blue", "Africa" = "green", "Americas" = "orange", "Oceania" = "purple")
+
+
+# Extend the lookup table with the new nationalities and their regions
+nationality_to_region_lookup <- c(
+  "NZL" = "Oceania",
+  "GBR" = "Europe",
+  "USA" = "Americas",
+  "NED" = "Europe",
+  "CAN" = "Americas",
+  "FRG" = "Europe",
+  "IRL" = "Europe",
+  "ITA" = "Europe",
+  "SUI" = "Europe",
+  "FRA" = "Europe",
+  "URS" = "Europe",
+  "POR" = "Europe",
+  "GDR" = "Europe",
+  "AUS" = "Oceania",
+  "JPN" = "Asia",
+  "HUN" = "Europe",
+  "MEX" = "Americas",
+  "CHN" = "Asia",
+  "POL" = "Europe",
+  "KOR" = "Asia",
+  "DEN" = "Europe",
+  "FIN" = "Europe",
+  "BEL" = "Europe",
+  "SWE" = "Europe",
+  "PRK" = "Asia",
+  "LUX" = "Europe",
+  "ROU" = "Europe",
+  "RSA" = "Africa",
+  "GRE" = "Europe",
+  "BLR" = "Europe",
+  "GER" = "Europe",
+  "RUS" = "Europe",
+  "BRA" = "Americas",
+  "TCH" = "Europe",
+  "ESP" = "Europe",
+  "UKR" = "Europe",
+  "KEN" = "Africa",
+  "SGP" = "Asia",
+  "YUG" = "Europe",
+  "MDA" = "Europe",
+  "CZE" = "Europe",
+  "MAR" = "Africa",
+  "LTU" = "Europe",
+  "EST" = "Europe",
+  "INA" = "Asia",
+  "ETH" = "Africa",
+  "CHI" = "Americas",
+  "ARG" = "Americas",
+  "KGZ" = "Asia",
+  "TUR" = "Asia",
+  "ECU" = "Americas",
+  "TAN" = "Africa",
+  "SLO" = "Europe",
+  "LAT" = "Europe",
+  "SCG" = "Europe",
+  "SRB" = "Europe",
+  "ALG" = "Africa",
+  "ZIM" = "Africa",
+  "BRN" = "Asia",
+  "NAM" = "Africa",
+  "CRO" = "Europe",
+  "PER" = "Americas",
+  "BDI" = "Africa",
+  "ISR" = "Asia",
+  "UGA" = "Africa",
+  "MGL" = "Asia",
+  "ERI" = "Africa",
+  "NOR"= "Europe"
+)
+
+
+map_nationality_to_region <- function(nat) {
+  region <- nationality_to_region_lookup[nat]
+  return(region)
+}
+
+
+
+# Apply the mapping function to both data frames
+combined_data_top3_men1981$Region <- map_nationality_to_region(combined_data_top3_men1981$Nat)
+
+
+# Create the combined plot with distinct colors for regions of the world
+combined_plot_nat_region_men <- ggplot() +
+  geom_point(data = combined_data_top3_men1981, aes(x = Date, y = race_time_seconds, color = Region)) +
+  scale_color_manual(values = region_palette) +  # Set the color palette
+  labs(title = "Top  3 Male Marathon Times (1981-2023) By Region of The World",
+       x = "Date",
+       y = "Race Time (seconds)")
+
+
+print(combined_plot_nat_region_men)
+
+
+
+
+```
+```{r}
+combined_data_top3_1982$Region <- map_nationality_to_region(combined_data_top3_1982$Nat)
+
+combined_plot_nat_region_men_v_women <- ggplot() +
+  geom_point(data = combined_data_top3_men1981, aes(x = Date, y = race_time_seconds, color = Region)) +
+  geom_point(data = combined_data_top3_1982, aes(x = Date, y = race_time_seconds, color = Region)) +
+  scale_color_manual(values = region_palette) +  # Set the color palette
+  labs(title = "Top Female and Male Marathon Times (1981-2023) By Region of The World",
+       x = "Date",
+       y = "Race Time (seconds)")
+
+
+combined_plot_nat_region_men_v_women
+
+
+
+
+
+```
+```{r}
+# Load necessary library
+library(dplyr)
+library(ggplot2)
+map_nationality_to_region <- function(nat) {
+  region <- nationality_to_region_lookup[nat]
+  return(region)
+}
+
+# Filter the data for the top 3 runners from Africa
+top3_africa <- combined_data_top3_men1981 %>%
+  filter(Region == "Africa") %>%
+  arrange(Date, race_time_seconds) %>%
+  group_by(Date) %>%
+  slice_head(n = 3)
+
+# Filter the data for the top 3 runners not from Africa
+top3_non_africa <- combined_data_top3_men1981 %>%
+  filter(Region != "Africa") %>%
+  arrange(Date, race_time_seconds) %>%
+  group_by(Date) %>%
+  slice_head(n = 3)
+
+# Combine the two filtered data frames
+combined_top3 <- bind_rows(top3_africa, top3_non_africa)
+
+# Create the combined plot with distinct colors for regions of the world
+combined_plot_nat_region_men <- ggplot() +
+  geom_point(data = combined_top3, aes(x = Date, y = race_time_seconds, color = Region)) +
+  scale_color_manual(values = region_palette) +  # Set the color palette
+  labs(title = "Top 3 Male Marathon Times (1981-2023) By Region of The World",
+       x = "Date",
+       y = "Race Time (seconds)")
+
+print(combined_plot_nat_region_men)
+
+
+
+```
+
+```{r}
+
+
+# Apply the mapping function to both data frames
+combined_data_top3_men1981$Region <- map_nationality_to_region(combined_data_top3_men1981$Nat)
+
+# Create the combined plot with distinct colors for regions of the world
+combined_plot_nat_region_men <- ggplot() +
+  geom_point(data = combined_data_top3_men1981, aes(x = Date, y = race_time_seconds, color = Region)) +
+  scale_color_manual(values = region_palette) +  # Set the color palette
+  labs(title = "Top  3 Male Marathon Times (1981-2023) By Region of The World",
+       x = "Date",
+       y = "Race Time (seconds)")
+
+print(combined_plot_nat_region_men)
+
+# Filter out performances from African countries
+filtered_data_rest_of_world_list <- lapply(1981:2023, function(year) {
+  filter_top_performance_by_year(edited_1981_fem_df2[!edited_1981_fem_df2$Nat %in% c("KEN", "RSA", "TAN", "MAR", "UGA", "ERI", "BDI", "ZIM", "NAM", "ALG","ETH"), ], year)
+})
+
+filtered_data_rest_of_world <- dplyr::bind_rows(filtered_data_rest_of_world_list)
+
+# Create the plot for the rest of the world
+rest_of_world_plot <- ggplot() +
+  geom_point(data = filtered_data_rest_of_world, aes(x = Date, y = race_time_seconds)) +
+  labs(title = "Top Performances in Women's Marathon By Non-African Nationalities (1981-2023)",
+       x = "Date",
+       y = "Race Time (seconds)")
+
+print(rest_of_world_plot)
+
+
+
+
+
+```
+
+##separate top 3 times by nationality (set the nationalities to be Africa/ROW)
+```{r}
+filter_top_performance_by_year <- function(data, year) {
+return(data[data$Date == year, ])
+}
+
+
+# Filter out performances from African countries
+filtered_data_rest_of_world_list <- lapply(1981:2023, function(year) {
+  filter_top_performance_by_year(edited_1981_fem_df2[!edited_1981_fem_df2$Nat %in% c("KEN", "RSA", "TAN", "MAR", "UGA", "ERI", "BDI", "ZIM", "NAM", "ALG","ETH"), ], year)
+})
+
+filtered_data_rest_of_world <- bind_rows(filtered_data_rest_of_world_list)
+
+# Create the plot for the rest of the world
+rest_of_world_plot <- ggplot() +
+  geom_point(data = filtered_data_rest_of_world, aes(x = Date, y = race_time_seconds)) +
+  labs(title = "Top Performances in Women's Marathon By Non-African Nationalities (1981-2023)",
+       x = "Date",
+       y = "Race Time (seconds)")
+
+print(rest_of_world_plot)
+
+
+
+```
+
+```{r}
+
+#Africa top performances (women)
+filtered_data_africa_list <- lapply(1981:2023, function(year) {
+  filter_top_performance_by_year(edited_1981_fem_df2[edited_1981_fem_df2$Nat %in% c("KEN", "RSA", "TAN", "MAR", "UGA", "ERI", "BDI", "ZIM", "NAM", "ALG","ETH"), ], year)
+})
+
+filtered_data_africa <- bind_rows(filtered_data_africa_list)
+
+# Create the plot for the rest of the world
+africa_plot <- ggplot() +
+  geom_point(data = filtered_data_africa, aes(x = Date, y = race_time_seconds)) +
+  labs(title = "Top Performances in Women's Marathon By African Nationalities (1981-2023)",
+       x = "Date",
+       y = "Race Time (seconds)")
+
+print(africa_plot)
+
+
+
+
+```
+```{r}
+#combined plot Africa top times and rest of the world top times (female)
+
+
+
+africa_rest_of_world_combined_f <- ggplot() +
+  geom_point(data = filtered_data_africa, aes(x = Date, y = race_time_seconds), color = "blue") +
+  geom_point(data = filtered_data_rest_of_world, aes(x = Date, y = race_time_seconds), color = "red") +
+  labs(title = "Top Performances in Women's Marathon Separated Between African Nationalities and the Rest of the World (1981-2023)",
+       x = "Date",
+       y = "Race Time (seconds)")
+
+print(africa_rest_of_world_combined_f)
+
+
+
+```
+
+```{r}
+
+
+
+```
+
+```{r}
+filtered_data_rest_of_world_list_men <- lapply(1981:2023, function(year) {
+  filter_top_performance_by_year(edited_1981_men_df2[!edited_1981_men_df2$Nat %in% c("KEN", "RSA", "TAN", "MAR", "UGA", "ERI", "BDI", "ZIM", "NAM", "ALG","ETH"), ], year)
+})
+
+filtered_data_rest_of_world_men <- bind_rows(filtered_data_rest_of_world_list_men)
+
+
+filtered_data_africa_list_men <- lapply(1981:2023, function(year) {
+  filter_top_performance_by_year(edited_1981_men_df2[edited_1981_men_df2$Nat %in% c("KEN", "RSA", "TAN", "MAR", "UGA", "ERI", "BDI", "ZIM", "NAM", "ALG","ETH"), ], year)
+})
+
+filtered_data_africa_men <- bind_rows(filtered_data_africa_list_men)
+```
+
+
+```{r}
+filtered_data_rest_of_world_men
+
+```
+
+```{r}
+africa_rest_of_world_combined_men <- ggplot() +
+  geom_point(data = filtered_data_africa_men, aes(x = Date, y = race_time_seconds), color = "blue") +
+  geom_point(data = filtered_data_rest_of_world_men, aes(x = Date, y = race_time_seconds), color = "red") +
+  labs(title = "Top Performances in Men's Marathon Separated Between African Nationalities and the Rest of the World (1981-2023)",
+       x = "Date",
+       y = "Race Time (seconds)")
+
+print(africa_rest_of_world_combined_men)
+
+
+```
+
+```{r}
+
+
+# Fit linear regression models
+model_africa_men <- lm(race_time_seconds ~ Date, data = filtered_data_africa_men)
+model_rest_of_world_men <- lm(race_time_seconds ~ Date, data = filtered_data_rest_of_world_men)
+
+summary(model_africa_men)
+summary(model_rest_of_world_men)
+
+
+# Perform ANCOVA
+combined_data <- rbind(mutate(filtered_data_africa_men, Group = "Africa"),
+                       mutate(filtered_data_rest_of_world_men, Group = "RestOfWorld"))
+
+ancova_model <- lm(race_time_seconds ~ Date * Group, data = combined_data)
+
+# Perform ANOVA on the interaction term
+ancova_anova <- anova(ancova_model)
+
+# Extract p-value for the interaction term
+ancova_anova
+
+summary(ancova_model)
+
+
+```
+```{r}
+simple_spline<- ggplot()+geom_point(data = edited_1981_fem_df2, aes(x = Date, y = race_time_seconds), color = "blue")
+simple_spline
+  
+
+library(splines)
+?splines
+nsp= 5
+
+xsp= ns(edited_1981_fem_df2$Date,nsp)
+lm_spline_example<- lm(race_time_seconds~xsp, data= edited_1981_fem_df2)
+
+plot(edited_1981_fem_df2$Date, lm_spline_example$fitted)
+
+```
+
+
+where number of splines=5
+```{r}
+nsp= 5
+
+xsp= ns(filtered_data_rest_of_world_men$Date,nsp)
+lm_spline_rest_of_world_men<- lm(race_time_seconds~xsp, data= filtered_data_rest_of_world_men)
+
+xsp2=ns(filtered_data_africa_men$Date,nsp)
+lm_spline_africa_men<- lm(race_time_seconds~xsp2,data=filtered_data_africa_men)
+
+
+
+xsp3= ns(filtered_data_rest_of_world$Date, nsp)
+lm_spline_rest_of_world_women<- lm(race_time_seconds~xsp3, data=filtered_data_rest_of_world)
+
+xsp4=ns(filtered_data_africa$Date,nsp)
+lm_spline_africa_women <- lm(race_time_seconds~xsp4, data=filtered_data_africa)
+
+plot(filtered_data_rest_of_world_men$Date,lm_spline_rest_of_world_men$fitted)
+plot(filtered_data_africa_men$Date, lm_spline_africa_men$fitted)
+plot(filtered_data_rest_of_world$Date,lm_spline_rest_of_world_women$fitted)
+plot(filtered_data_africa$Date,lm_spline_africa_women$fitted)
+```
+where number of splines=3
+
+```{r}
+
+nsp3= 3
+
+xsp= ns(filtered_data_rest_of_world_men$Date,nsp3)
+lm_spline_rest_of_world_men<- lm(race_time_seconds~xsp, data= filtered_data_rest_of_world_men)
+
+xsp2=ns(filtered_data_africa_men$Date,nsp3)
+lm_spline_africa_men<- lm(race_time_seconds~xsp2,data=filtered_data_africa_men)
+
+
+
+xsp3= ns(filtered_data_rest_of_world$Date, nsp3)
+lm_spline_rest_of_world_women<- lm(race_time_seconds~xsp3, data=filtered_data_rest_of_world)
+
+xsp4=ns(filtered_data_africa$Date,nsp3)
+lm_spline_africa_women <- lm(race_time_seconds~xsp4, data=filtered_data_africa)
+
+plot(filtered_data_rest_of_world_men$Date,lm_spline_rest_of_world_men$fitted)
+plot(filtered_data_africa_men$Date, lm_spline_africa_men$fitted)
+plot(filtered_data_rest_of_world$Date,lm_spline_rest_of_world_women$fitted)
+plot(filtered_data_africa$Date,lm_spline_africa_women$fitted)
+
+
+
+
+```
+where number of splines is 7
+
+```{r}
+
+nsp7= 7
+
+xsp= ns(filtered_data_rest_of_world_men$Date,nsp7)
+lm_spline_rest_of_world_men<- lm(race_time_seconds~xsp, data= filtered_data_rest_of_world_men)
+
+xsp2=ns(filtered_data_africa_men$Date,nsp7)
+lm_spline_africa_men<- lm(race_time_seconds~xsp2,data=filtered_data_africa_men)
+
+
+
+xsp3= ns(filtered_data_rest_of_world$Date, nsp7)
+lm_spline_rest_of_world_women<- lm(race_time_seconds~xsp3, data=filtered_data_rest_of_world)
+
+xsp4=ns(filtered_data_africa$Date,nsp7)
+lm_spline_africa_women <- lm(race_time_seconds~xsp4, data=filtered_data_africa)
+
+plot(filtered_data_rest_of_world_men$Date,lm_spline_rest_of_world_men$fitted)
+plot(filtered_data_africa_men$Date, lm_spline_africa_men$fitted)
+plot(filtered_data_rest_of_world$Date,lm_spline_rest_of_world_women$fitted)
+plot(filtered_data_africa$Date,lm_spline_africa_women$fitted)
+
+
+
+
+
+
+```
+
+```{r}
+
+nsp2= 2
+
+xsp= ns(filtered_data_rest_of_world_men$Date,nsp2)
+lm_spline_rest_of_world_men<- lm(race_time_seconds~xsp, data= filtered_data_rest_of_world_men)
+
+xsp2=ns(filtered_data_africa_men$Date,nsp2)
+lm_spline_africa_men<- lm(race_time_seconds~xsp2,data=filtered_data_africa_men)
+
+
+
+xsp3= ns(filtered_data_rest_of_world$Date, nsp2)
+lm_spline_rest_of_world_women<- lm(race_time_seconds~xsp3, data=filtered_data_rest_of_world)
+
+xsp4=ns(filtered_data_africa$Date,nsp)
+lm_spline_africa_women <- lm(race_time_seconds~xsp4, data=filtered_data_africa)
+
+plot(filtered_data_rest_of_world_men$Date,lm_spline_rest_of_world_men$fitted)
+plot(filtered_data_africa_men$Date, lm_spline_africa_men$fitted)
+plot(filtered_data_rest_of_world$Date,lm_spline_rest_of_world_women$fitted)
+plot(filtered_data_africa$Date,lm_spline_africa_women$fitted)
+
+
+
+```
+
+
+
+
+
+```{r}
+interaction_signif_mod<- lm(race_time_seconds~Date*Group, data=combined_data)
+
+summary()
+
+```
+
+```{r}
+library(gridExtra)
+grid.arrange( africa_rest_of_world_combined_men,africa_rest_of_world_combined_f, ncol=2)
+
+
+
+
+```
+
+
+Trying to understand GEV
+```{r}
+#install.packages("extRemes")
+```
+
+```{r}
+#Dr. Smith's fxn
+
+# liklihood function (compute NLLH - defaults to 10^10 if parameter values infeasible)
+# par vector is (mu, log psi, xi)
+#lh=function(par){
+#if(abs(par[2])>20){return(10^10)}
+#if(abs(par[3])>1){return(10^10)}
+#if(par[3]>=0){return(10^10)}
+#mu=par[1]
+#psi=exp(par[2])
+#xi=par[3]
+#f=0
+#for(i in 9:21){
+#f=f+r*par[2]
+#s1=1+xi*(mu-yy[i,6])/psi
+#if(s1<=0){return(10^10)}
+#s1=-log(s1)/xi
+#if(abs(s1)>20){return(10^10)}
+#f=f+exp(s1)
+#for(j in 2:6){
+#s1=1+xi*(mu-yy[i,j])/psi
+#if(s1<=0){return(10^10)}
+#f=f+(1+1/xi)*log(s1)
+#}}
+#return(f)
+#}
+
+
+
+
+
+```
+
+```{r}
+#extRemes
+library(extRemes)
+
+# Remove rows with missing values in race_time_seconds
+filtered_data_rest_of_world_men <- na.omit(filtered_data_rest_of_world_men)
+
+# Fit the GEV distribution using MLE
+fit_1 <- fevd(filtered_data_rest_of_world_men$race_time_seconds,filtered_data_rest_of_world_men , units = "seconds", type = "GEV", method = "MLE")
+
+# Print the fitted model
+print(fit_1)
+
+```
+
+
+my own function based on extRemes & Dr. Smith's notes
+```{r}
+# start with GEV PDF
+gev_pdf <- function(x, mu, sigma, xi) {
+  z <- (x - mu) / sigma
+  if (xi == 0) {
+    pdf <- exp(-z - exp(-z)) / sigma  # Gumbel distribution (from Cole's book)
+  } else {
+    pdf <- (1 + xi * z)^(-1/xi - 1) * exp(-(1 + xi * z)^(-1/xi)) / sigma  # Generalized Extreme Value distribution
+  }
+  return(pdf)
+}
+
+# Define the negative log-likelihood fxn
+neg_log_likelihood <- function(par, data) {
+  mu <- par[1]
+  sigma <- par[2]
+  xi <- par[3]
+  
+  # Compute the negative log-likelihood
+  neg_log_likelihood <- -sum(log(gev_pdf(data, mu, sigma, xi)))
+  #extend this to fit data with trends (linear, quadratic)
+  #hessian=T  standard errors
+  return(neg_log_likelihood)
+}
+
+
+data <- filtered_data_rest_of_world_men$race_time_seconds
+
+
+
+initial_parameters <- c(mean(data), sd(data), 0)  # Using sample mean and standard deviation as initial parameters?
+
+# Fit the distribution using maximum likelihood estimation (MLE) 
+fit <- optim(par = initial_parameters, fn = neg_log_likelihood, data = data)
+
+# extract estimated parameters
+estimated_parameters <- fit$par
+estimated_parameters
+```
+##same idea, but trying to put in boundary checkpoints
+
+```{r}
+# GEV Probability Density Function
+gev_pdf <- function(x, mu, sigma, xi) {
+  z <- (x - mu) / sigma
+  if (xi == 0) {
+    pdf <- exp(-z - exp(-z)) / sigma  # Gumbel distribution (from Cole's book)
+  } else {
+    pdf <- (1 + xi * z)^(-1/xi - 1) * exp(-(1 + xi * z)^(-1/xi)) / sigma  # Generalized Extreme Value distribution
+  }
+  return(pdf)
+}
+
+# Define the negative log-likelihood function
+neg_log_likelihood <- function(par, data) {
+  mu <- par[1]
+  sigma <- par[2]
+  xi <- par[3]
+  
+  # Apply boundary constraints
+  if (abs(sigma) < 1e-10 || abs(sigma) > 1e10 || abs(xi) >1) {
+    return(1e10)  # Return a large value if parameters are infeasible
+  }
+  
+  # Compute the negative log-likelihood
+  neg_log_likelihood <- -sum(log(gev_pdf(data, mu, sigma, xi)))
+  
+  return(neg_log_likelihood)
+}
+
+# Data
+data <- filtered_data_rest_of_world_men$race_time_seconds
+
+# Initial parameters
+initial_parameters <- c(mean(data), sd(data), 0)
+
+# Fit the distribution using maximum likelihood estimation (MLE)
+fit <- optim(par = initial_parameters, fn = neg_log_likelihood, data = data, hessian=TRUE)
+
+# Extract estimated parameters
+estimated_parameters <- fit$par
+estimated_parameters
+
+v=solve(fit$hessian)
+v
+```
+
+```{r}
+#sq rt of the diagonals are the standard errors
+square_root_diagonals <- function(matrix) {
+  diag_values <- sqrt(diag(matrix))
+  result <- matrix
+  diag(result) <- diag_values
+  return(result)
+}
+v_errors <- square_root_diagonals(v)
+v_errors
+
+```
+#now create a function that modifies nll such that t can vary and so can r per year
+
+```{r}
+# GEV Probability Density Function
+gev_pdf <- function(x, mu, sigma, xi) {
+  z <- (x - mu) / sigma
+  if (xi == 0) {
+    pdf <- exp(-z - exp(-z)) / sigma  # Gumbel distribution (from Cole's book)
+  } else {
+    pdf <- (1 + xi * z)^(-1/xi - 1) * exp(-(1 + xi * z)^(-1/xi)) / sigma  # Generalized Extreme Value distribution
+  }
+  return(pdf)
+}
+
+
+neg_log_likelihood <- function(par, data, T) {
+  mu <- par[1]
+  sigma <- par[2]
+  xi <- par[3]
+  
+  # Apply boundary constraints
+  if (abs(sigma) < 1e-10 || abs(sigma) > 1e10 || abs(xi) > 1) {
+    return(1e10)  # Return a large value if parameters are infeasible
+  }
+  
+  # Compute the negative log-likelihood
+  nll <- 0
+  for (t in 1:T) {
+    z_t <- sort((data[[t]] - mu) / sigma)
+    for (r in 1:length(z_t)) {
+      if (xi == 0) {
+        pdf <- exp(-z_t[r] - exp(-z_t[r])) / sigma  # Gumbel distribution
+        pdf_r_minus_1 <- exp(-z_t[-r] - exp(-z_t[-r])) / sigma  # Gumbel distribution for r-1 order statistics
+      } else {
+        pdf <- (1 + xi * z_t[r])^(-1/xi - 1) * exp(-(1 + xi * z_t[r])^(-1/xi)) / sigma  # Generalized Extreme Value distribution
+        pdf_r_minus_1 <- (1 + xi * z_t[-r])^(-1/xi - 1) * exp(-(1 + xi * z_t[-r])^(-1/xi)) / sigma  # GEV distribution for r-1 order statistics
+      }
+      
+      fr <- pdf
+      fr_minus_1 <- pdf_r_minus_1
+      
+      nll <- nll - log(fr) + log(sum(fr_minus_1))
+    }
+  }
+  
+  return(nll)
+}
+
+
+# Full Data I'm testing this on
+data <- list(filtered_data_rest_of_world_men$race_time_seconds)  # Wrap the data in a list
+
+# Number of years (need to define T for the optim and nll fxn)
+T <- length(data)
+
+# Initial parameters
+initial_parameters <- c(mean(data[[1]]), sd(data[[1]]), 0)
+
+# Fit the distribution using maximum likelihood estimation (MLE)
+fit <- optim(par = initial_parameters, fn = neg_log_likelihood, data = data, T = T, hessian=TRUE)
+
+# Extract estimated parameters (note that the xi new estimate is positive, I messed up)
+estimated_parameters <- fit$par
+estimated_parameters
+
+```
+Now I want to test the new function I wrote above on data with diferent levels of r: does it work?
+
+```{r}
+#FUNCTION TO SCRAPE TOP TIMES PER GIVEN AMOUNT OF YEARS 
+
+# Initialize an empty list to store filtered data for each year
+filtered_data_list_testing <- list()
+
+# Iterate through years from 1981 to 2023
+for (year in 1981:2023) {
+  filtered_data_test1 <- filtered_data_rest_of_world_men %>%
+    filter(as.integer(Date) == year) %>%
+    arrange(race_time_seconds) %>%
+    head(1)
+  
+  # Store filtered data in the list
+  filtered_data_list_testing[[as.character(year)]] <- filtered_data_test1
+}
+
+function_test_data_top1 <- bind_rows(filtered_data_list_testing)
+
+function_test_data_top1
+
+
+```
+```{r}
+# Initialize an empty list to store filtered data for each year
+filtered_data_list_testing <- list()
+
+# Iterate through years from 1981 to 2023
+for (year in 1981:2023) {
+  filtered_data_test1 <- filtered_data_rest_of_world_men %>%
+    filter(as.integer(Date) == year) %>%
+    arrange(race_time_seconds) %>%
+    head(2)
+  
+  # Store filtered data in the list
+  filtered_data_list_testing[[as.character(year)]] <- filtered_data_test1
+}
+
+function_test_data_top2 <- bind_rows(filtered_data_list_testing)
+
+function_test_data_top2
+
+
+```
+
+```{r}
+data <- list(function_test_data_top1$race_time_seconds)  # Wrap the data in a list
+
+# Number of years (need to define T for the optim and nll fxn)
+T <- length(data)
+
+# Initial parameters
+initial_parameters <- c(mean(data[[1]]), sd(data[[1]]), 0)
+
+# Fit the distribution using maximum likelihood estimation (MLE)
+fit <- optim(par = initial_parameters, fn = neg_log_likelihood, data = data, T = T, hessian=TRUE)
+
+# Extract estimated parameters (note that the xi new estimate is positive, I messed up)
+estimated_parameters_top1 <- fit$par
+estimated_parameters_top1
+```
+
+```{r}
+data <- list(function_test_data_top2$race_time_seconds)  # Wrap the data in a list
+
+# Number of years (need to define T for the optim and nll fxn)
+T <- length(data)
+
+# Initial parameters
+initial_parameters <- c(mean(data[[1]]), sd(data[[1]]), 0)
+
+# Fit the distribution using maximum likelihood estimation (MLE)
+fit <- optim(par = initial_parameters, fn = neg_log_likelihood, data = data, T = T, hessian=TRUE)
+
+estimated_parameters_top2 <- fit$par
+estimated_parameters_top2
+
+
+
+```
+
+```{r}
+# GEV Probability Density Function
+gev_pdf <- function(x, mu, sigma, xi) {
+  z <- (x - mu) / sigma
+  if (xi == 0) {
+    pdf <- exp(-z - exp(-z)) / sigma  # Gumbel distribution (from Cole's book)
+  } else {
+    pdf <- (1 + xi * z)^(-1/xi - 1) * exp(-(1 + xi * z)^(-1/xi)) / sigma  # Generalized Extreme Value distribution
+  }
+  return(pdf)
+}
+
+# Define the negative log-likelihood function with censorship constraint
+neg_log_likelihood_censored <- function(par, data, T, A) {
+  mu <- par[1]
+  sigma <- par[2]
+  xi <- par[3]
+  
+  # Apply boundary constraints
+  if (abs(sigma) < 1e-10 || abs(sigma) > 1e10 || abs(xi) > 1) {
+    return(1e10)  # Return a large value if parameters are infeasible
+  }
+  
+  # Compute the negative log-likelihood
+  nll <- 0
+  for (t in 1:T) {
+    z_t <- sort(( data[[t]]- mu) / sigma)
+    r_star <- sum(data[[t]] < A)  # Number of performances better than A in year t
+    
+    if (r_star == length(z_t)) {
+      nll <- nll - log(gev_pdf(z, mu, sigma, xi))  # Handling case when all performances are censored
+    } else {
+      for (r in 1:r_star) {
+        if (z_t[r] > A) {
+          # Replace z(r) by A if z(r) > A
+          z_t[r] <- A
+        }
+      }
+      
+      # Compute negative log-likelihood using modified data
+      for (r in 1:r_star) {
+        if (xi == 0) {
+          pdf <- exp(-z_t[r] - exp(-z_t[r])) / sigma  # Gumbel distribution
+          pdf_r_minus_1 <- exp(-z_t[-r] - exp(-z_t[-r])) / sigma  # Gumbel distribution for r-1 order statistics
+        } else {
+          pdf <- (1 + xi * z_t[r])^(-1/xi - 1) * exp(-(1 + xi * z_t[r])^(-1/xi)) / sigma  # Generalized Extreme Value distribution
+          pdf_r_minus_1 <- (1 + xi * z_t[-r])^(-1/xi - 1) * exp(-(1 + xi * z_t[-r])^(-1/xi)) / sigma  # GEV distribution for r-1 order statistics
+        }
+        
+        fr <- pdf
+        fr_minus_1 <- pdf_r_minus_1
+        
+        nll <- nll - log(fr) + log(sum(fr_minus_1))
+      }
+    }
+  }
+  
+  return(nll)
+}
+
+# Full Data I'm testing this on
+data <- list(filtered_data_rest_of_world_men$race_time_seconds)  # Wrap the data in a list
+
+# Number of years (need to define T for the optim and nll fxn)
+T <- length(data)
+
+# Calculate mean and standard deviation of the data
+data_mean <- mean(data[[1]])
+data_sd <- sd(data[[1]])
+
+# Adjust initial parameters
+initial_parameters <- c(data_mean, data_sd, 0)  # Example initial parameters
+
+# Fit the distribution using maximum likelihood estimation (MLE) with censorship constraint
+fit_censored <- optim(par = initial_parameters, fn = neg_log_likelihood_censored, data = data, T = T, A = 9300, hessian = TRUE)
+
+# Extract estimated parameters
+estimated_parameters_censored <- fit_censored$par
+estimated_parameters_censored
+
+
+```
+
+
+
+
+```{r}
+total_seconds <- 7532.091
+hours <- floor(total_seconds / 3600)
+minutes <- floor((total_seconds %% 3600) / 60)
+
+print(paste(hours, "hours", minutes, "minutes"))
+
+#endpoint<-estimated_parameters[1]+(estimated_parameters[2] /estimated_parameters[3])
+#endpoint
+
+7830.777132-(142.897940/0.478422)
+#search the minimum in the data and compare it to 2:05
+```
+
+```{r}
+library(extRemes)
+
+ #Fit the GEV distribution using MLE
+fit_1 <- fevd(filtered_data_rest_of_world_men$race_time_seconds, filtered_data_rest_of_world_men, units = "seconds", type = "GEV", method = "MLE")
+
+fit_1
+```
+```{r}
+?`extRemes-package`
+
+```
+
+```{r}
+
+
+
+# Modify the "Date" column to represent years since 1981
+filtered_data_rest_of_world_men$Date <- filtered_data_rest_of_world_men$Date - 1981
+
+# rename the column to reflect the change
+colnames(filtered_data_rest_of_world_men)[colnames(filtered_data_rest_of_world_men) == "Date"] <- "Years_since_1981"
+
+
+
+
+
+
+```
+
+
+
+```{r}
+for (year in 1981:2023) {
+  filtered_data_rowm <- edited_1981_fem_df2 %>%
+    filter(as.integer(Date) == year) %>%
+    arrange(race_time_seconds) %>%
+    head(3)
+  
+  # Store filtered data in the list
+  filtered_data_list_6[[as.character(year)]] <- filtered_data_6
+}
+
+combined_data_top3_1982 <- bind_rows(filtered_data_list_6)
+combined_data_top3_1982
+
+
+
+
+```
+
+##use for linear model
+```{r}
+# Fit linear regression model
+lm_model_rest_of_world_men <- lm(adjusted_times ~ , data = filtered_data_rest_of_world_men)
+
+
+residuals <- residuals(lm_model_rest_of_world_men)
+
+# Fit the GEV distribution to the residuals
+fit_gev <- optim(par = initial_parameters, fn = neg_log_likelihood, data = residuals,A=9.3)
+
+
+estimated_parameters_gev <- fit_gev$par
+
+# Plotting 
+par(mfrow = c(1, 2))  
+
+plot(filtered_data_rest_of_world_men$Years_since_1981, filtered_data_rest_of_world_men$race_time_seconds, 
+     xlab = "Years since 1981", ylab = "Race time (seconds)", main = "Linear Model", 
+     pch = 16, col = "lightblue")
+abline(lm_model, col = "red")  # Add the linear regression line
+
+#residuals
+hist(residuals, main = "Residuals Histogram", xlab = "Residuals", ylab = "Frequency", col = "blue", border = "white")
+
+
+par(mfrow = c(1, 1))
+```
+
+##quadratic & linear model
+```{r}
+# Fit quadratic regression model
+quad_model <- lm(race_time_seconds ~ poly(Years_since_1981, 2), data = filtered_data_rest_of_world_men)
+
+
+residuals_quad <- residuals(quad_model)
+
+
+fit_gev_quad <- optim(par = initial_parameters, fn = neg_log_likelihood, data = residuals_quad)
+
+
+estimated_parameters_gev_quad <- fit_gev_quad$par
+
+# visualizing
+par(mfrow = c(1, 3))  
+
+# Linear model
+plot(filtered_data_rest_of_world_men$Years_since_1981, filtered_data_rest_of_world_men$race_time_seconds, 
+     xlab = "Years since 1981", ylab = "Race time (seconds)", main = "Linear Model", 
+     pch = 16, col = "lightblue")
+abline(lm_model_rest_of_world_men, col = "red")  
+
+# Quadratic model
+plot(filtered_data_rest_of_world_men$Years_since_1981, filtered_data_rest_of_world_men$race_time_seconds, 
+     xlab = "Years since 1981", ylab = "Race time (seconds)", main = "Quadratic Model", 
+     pch = 16, col = "lightblue")
+lines(filtered_data_rest_of_world_men$Years_since_1981, predict(quad_model), col = "red")  
+
+# Residuals of quad mod
+hist(residuals_quad, main = "Residuals Histogram (Quadratic)", xlab = "Residuals", ylab = "Frequency", col = "blue", border = "white")
+
+
+par(mfrow = c(1, 1))
+
+```
+
+
+
+```{r}
+
+
+density_linear <- density(residuals)
+density_quad <- density(residuals_quad)
+
+
+plot(density_linear, main = "Residuals Comparison", xlim = c(min(c(density_linear$x, density_quad$x)), max(c(density_linear$x, density_quad$x))), 
+     xlab = "Residuals", ylab = "Density", col = "blue", lwd = 2, lty = 1)
+lines(density_quad, col = "green", lwd = 2, lty = 2)
+legend("topright", c("Linear Model", "Quadratic Model"), fill = c("blue", "green"))
+
+# Add labels and legend
+title("Residuals Comparison")
+xlabel <- "Residuals"
+ylabel <- "Density"
+legend("topright", legend = c("Linear Model", "Quadratic Model"), fill = c("blue", "green"))
+
+
+```
+
+```{r}
+filtered_data_rest_of_world_men$adjusted_times<-(filtered_data_rest_of_world_men$race_time_seconds) /(1000)
+
+# Define the negative log-likelihood function
+neg_log_likelihood <- function(par, data, A) {
+  mu <- par[1]
+  sigma <- par[2]
+  xi <- par[3]
+  
+   # Apply boundary constraints
+  if (sigma < 1e-10 || abs(sigma) > 1e10 || abs(xi) >1) {
+    return(1e10)  # Return a large value if parameters are infeasible
+  }
+  
+  # Compute the negative log-likelihood
+  nllh <- 0
+  
+  for (t in seq_along(data)) {
+    year_data <- data[[t]]
+    
+   
+    
+    r <- length(year_data)  # Number of observations for year
+    
+    # Find the index of r_star for the current year
+     if (max(year_data) <= A) {
+      r_star <- r
+    }
+      else {
+      r_star <- count(which(year_data < A))
+    }
+    
+    
+    # Compute threshold and adjusted r
+    ut <- ifelse(max(r_star) < 1, max(year_data), A)
+    #adjusted_r <- ifelse(max(year_data) < A, r, r_star)
+    
+    
+    
+    # Compute terms of the negative log-likelihood
+    if ((1 + xi * ((mu - ut) / sigma)<0))
+         return(1e10)
+    term1 <- (1 + xi * ((mu - ut) / sigma)^(-1/xi))
+    
+    
+    
+    term2 <- r_star * log(sigma)
+    if (min(1 + xi * (mu - year_data) / sigma)<0)
+             {return(1e10)}
+    
+    term3 <- (1+(1/xi))*sum(log(1 + xi * (mu - year_data) / sigma))
+     
+    
+              
+    nllh <- nllh + (term1) + term2 + term3
+  }
+  
+  print(par)
+  print(nllh)
+  return(nllh)
+  
+}
+
+```
+
+
+
+```{r}
+# Data
+data <- list(filtered_data_rest_of_world_men$adjusted_times)  # List of vectors, each containing running times for one year
+A <- rep(9.300, length(data))  # Censoring threshold for each year
+
+neg_log_likelihood(par=c(mean(filtered_data_rest_of_world_men$adjusted_times),200,-0.2), data=data, A=A)
+
+
+
+
+```
+
+```{r}
+
+
+
+# Initial parameters
+initial_parameters <- c(mean(filtered_data_rest_of_world_men$adjusted_times), .15, -0.2) # Initialize with reasonable parameters
+
+# Fit the distribution using maximum likelihood estimation (MLE)
+fit <- optim(par = initial_parameters, fn = neg_log_likelihood, data = data, A = A)
+
+# Display the fitted parameters
+fit
+
+
+
+
+
+
+
+#consider rescaling the seconds to thousands of seconds to adjust for differences in scale between mu and xi
+
+```
+
+```{r}
+#linear mod
+# Fit linear regression model
+lm_model_rest_of_world_men <- lm(race_time_seconds ~ , data = filtered_data_rest_of_world_men)
+
+
+
+
+```
+
+
+```{r}
+
+filtered_data_rest_of_world_men
+
+
+
+```
